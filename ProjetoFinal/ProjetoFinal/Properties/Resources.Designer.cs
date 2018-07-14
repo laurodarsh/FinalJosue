@@ -153,9 +153,9 @@ namespace ProjetoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_2_512 {
+        internal static System.Drawing.Bitmap log {
             get {
-                object obj = ResourceManager.GetObject("login_2_512", resourceCulture);
+                object obj = ResourceManager.GetObject("log", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

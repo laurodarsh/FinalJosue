@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CategoryAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryAllForm.Designer.cs">
+      <DependentUpon>CategoryAllForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,7 +106,7 @@
     <Content Include="Icons\img_231353.png" />
     <Content Include="Icons\img_275374.png" />
     <Content Include="Icons\img_433078.png" />
-    <Content Include="Icons\login-2-512.png" />
+    <Content Include="Icons\log.png" />
     <Content Include="Icons\user_male2-512.png" />
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>

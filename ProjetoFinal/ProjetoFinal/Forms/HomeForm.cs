@@ -16,5 +16,36 @@ namespace ProjetoFinal.Forms
         {
             InitializeComponent();
         }
+
+        private void pbxCategory_MouseEnter(object sender, EventArgs e)
+        {
+            pbxCategory.BackColor = Color.Gainsboro;
+            lblCategory.Visible = true;
+
+        }
+
+        private void pbxCategory_MouseLeave(object sender, EventArgs e)
+        {
+            pbxCategory.BackColor = Color.Transparent;
+            lblCategory.Visible = false;
+        }
+
+        private void pbxCategory_Click(object sender, EventArgs e)
+        {
+            CategoryAllForm c = new CategoryAllForm();
+            c.Show();
+            this.Hide();
+        }
+
+        private void pbxProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxProduct_MouseEnter(object sender, EventArgs e)
+        {
+            pbxProduct.BackColor = Color.Transparent;
+            lblProduct.Visible = false;
+    }
     }
 }
