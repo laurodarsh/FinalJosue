@@ -16,6 +16,12 @@ namespace ProjetoFinal.Forms
         {
             InitializeComponent();
         }
+        //Category
+        private void pbxCategory_Click(object sender, EventArgs e)
+        {
+            CategoryAllForm c = new CategoryAllForm();
+            c.Show();
+        }
 
         private void pbxCategory_MouseEnter(object sender, EventArgs e)
         {
@@ -29,23 +35,81 @@ namespace ProjetoFinal.Forms
             pbxCategory.BackColor = Color.Transparent;
             lblCategory.Visible = false;
         }
-
-        private void pbxCategory_Click(object sender, EventArgs e)
-        {
-            CategoryAllForm c = new CategoryAllForm();
-            c.Show();
-            this.Hide();
-        }
-
+        
+        //Product
         private void pbxProduct_Click(object sender, EventArgs e)
         {
-
+            ProductAllForm p = new ProductAllForm();
+            p.Show();
         }
 
         private void pbxProduct_MouseEnter(object sender, EventArgs e)
         {
+            pbxProduct.BackColor = Color.Gainsboro;
+            lblProduct.Visible = true;
+    }
+
+        private void pbxProduct_MouseLeave(object sender, EventArgs e)
+        {
             pbxProduct.BackColor = Color.Transparent;
             lblProduct.Visible = false;
-    }
+        }
+
+        //User
+        private void pbxUser_Click(object sender, EventArgs e)
+        {
+            UserAllForm u = new UserAllForm();
+            u.Show();
+        }
+
+        private void pbxUser_MouseEnter(object sender, EventArgs e)
+        {
+            pbxUser.BackColor = Color.Gainsboro;
+            lblUser.Visible = true;
+        }
+
+        private void pbxUser_MouseLeave(object sender, EventArgs e)
+        {
+            pbxUser.BackColor = Color.Transparent;
+            lblUser.Visible = false;
+        }
+
+        //Log
+        private void pbxLog_Click(object sender, EventArgs e)
+        {
+            LogAllForm l = new LogAllForm();
+            l.Show();
+        }
+
+        private void pbxLog_MouseEnter(object sender, EventArgs e)
+        {
+            pbxLog.BackColor = Color.Gainsboro;
+            lblLog.Visible = true;
+        }
+
+        private void pbxLog_MouseLeave(object sender, EventArgs e)
+        {
+            pbxLog.BackColor = Color.Transparent;
+            lblLog.Visible = false;
+        }
+
+        //User Profile
+        private void pbxUserProfile_Click(object sender, EventArgs e)
+        {
+            UserProfileAllForm up = new UserProfileAllForm();
+            up.Show();
+        }
+
+        private void pbxUserProfile_MouseEnter(object sender, EventArgs e)
+        {
+            pbxUserProfile.BackColor = Color.Gainsboro;
+            lblUserProfile.Visible = true;
+        }
+
+        private void pbxUserProfile_MouseLeave(object sender, EventArgs e)
+        {
+            pbxUserProfile.BackColor = Color.Transparent;
+            lblUserProfile.Visible = false;
+        }
     }
 }

@@ -52,11 +52,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CategoryAllForm.cs">
+    <Compile Include="Forms\Category\CategoryAllForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CategoryAllForm.Designer.cs">
+    <Compile Include="Forms\Category\CategoryAllForm.Designer.cs">
       <DependentUpon>CategoryAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Category\CategoryDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Category\CategoryDetailsForm.Designer.cs">
+      <DependentUpon>CategoryDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HomeForm.cs">
       <SubType>Form</SubType>
@@ -64,13 +70,88 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\ProductAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\ProductAllForm.Designer.cs">
+      <DependentUpon>ProductAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\ProductDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\ProductDetailsForm.Designer.cs">
+      <DependentUpon>ProductDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserProfile\UserProfileDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserProfile\UserProfileDetailsForm.Designer.cs">
+      <DependentUpon>UserProfileDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserAllForm.Designer.cs">
+      <DependentUpon>UserAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserDetailsForm.Designer.cs">
+      <DependentUpon>UserDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserProfile\UserProfileAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserProfile\UserProfileAllForm.Designer.cs">
+      <DependentUpon>UserProfileAllForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Category\CategoryAllForm.resx">
+      <DependentUpon>CategoryAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Category\CategoryDetailsForm.resx">
+      <DependentUpon>CategoryDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\ProductAllForm.resx">
+      <DependentUpon>ProductAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\ProductDetailsForm.resx">
+      <DependentUpon>ProductDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserProfile\UserProfileAllForm.resx">
+      <DependentUpon>UserProfileAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserProfile\UserProfileDetailsForm.resx">
+      <DependentUpon>UserProfileDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserAllForm.resx">
+      <DependentUpon>UserAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserDetailsForm.resx">
+      <DependentUpon>UserDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

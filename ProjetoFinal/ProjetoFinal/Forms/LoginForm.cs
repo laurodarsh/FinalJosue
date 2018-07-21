@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal.Forms
 {
-    public partial class CategoryAllForm : Form
+    public partial class LoginForm : Form
     {
-        public CategoryAllForm()
+        public LoginForm()
         {
             InitializeComponent();
         }

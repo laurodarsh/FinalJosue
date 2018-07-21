@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinal.Forms
 {
-    partial class CategoryAllForm
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "CategoryAllForm";
+            this.Text = "LoginForm";
         }
 
         #endregion
