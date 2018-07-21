@@ -30,7 +30,7 @@
         {
             this.lblSearch = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pbxAdd = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
@@ -40,7 +40,7 @@
             this.lblAdd = new System.Windows.Forms.Label();
             this.lblEdit = new System.Windows.Forms.Label();
             this.lblDelete = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -65,17 +65,16 @@
             this.tbxSearch.Size = new System.Drawing.Size(261, 20);
             this.tbxSearch.TabIndex = 1;
             // 
-            // pictureBox1
+            // pbxSearch
             // 
-            this.pictureBox1.Image = global::ProjetoFinal.Properties.Resources.img_176563;
-            this.pictureBox1.Location = new System.Drawing.Point(377, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbxSearch.Image = global::ProjetoFinal.Properties.Resources.img_176563;
+            this.pbxSearch.Location = new System.Drawing.Point(377, 16);
+            this.pbxSearch.Name = "pbxSearch";
+            this.pbxSearch.Size = new System.Drawing.Size(35, 31);
+            this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSearch.TabIndex = 2;
+            this.pbxSearch.TabStop = false;
+            this.pbxSearch.UseWaitCursor = true;           
             // 
             // dataGridView1
             // 
@@ -94,6 +93,8 @@
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAdd.TabIndex = 4;
             this.pbxAdd.TabStop = false;
+            this.pbxAdd.MouseEnter += new System.EventHandler(this.pbxAdd_MouseEnter);
+            this.pbxAdd.MouseLeave += new System.EventHandler(this.pbxAdd_MouseLeave);
             // 
             // pbxBack
             // 
@@ -104,6 +105,8 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxBack.TabIndex = 5;
             this.pbxBack.TabStop = false;
+            this.pbxBack.MouseEnter += new System.EventHandler(this.pbxBack_MouseEnter);
+            this.pbxBack.MouseLeave += new System.EventHandler(this.pbxBack_MouseLeave);
             // 
             // pbxEdit
             // 
@@ -114,6 +117,8 @@
             this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxEdit.TabIndex = 6;
             this.pbxEdit.TabStop = false;
+            this.pbxEdit.MouseEnter += new System.EventHandler(this.pbxEdit_MouseEnter);
+            this.pbxEdit.MouseLeave += new System.EventHandler(this.pbxEdit_MouseLeave);
             // 
             // pbxDelete
             // 
@@ -124,6 +129,8 @@
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxDelete.TabIndex = 7;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.MouseEnter += new System.EventHandler(this.pbxDelete_MouseEnter);
+            this.pbxDelete.MouseLeave += new System.EventHandler(this.pbxDelete_MouseLeave);
             // 
             // lblBack
             // 
@@ -187,12 +194,12 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.pbxAdd);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxSearch);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Name = "CategoryAllForm";
             this.Text = "Categoria";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
@@ -207,7 +214,7 @@
 
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox tbxSearch;
-        internal System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.PictureBox pbxSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pbxAdd;
         private System.Windows.Forms.PictureBox pbxBack;

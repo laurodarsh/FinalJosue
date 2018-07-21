@@ -17,9 +17,56 @@ namespace ProjetoFinal.Forms
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        //Delete
+        private void pbxDelete_MouseEnter(object sender, EventArgs e)
         {
+            pbxDelete.BackColor = Color.Gainsboro;
+            lblDelete.Visible = true;
+        }
 
+        private void pbxDelete_MouseLeave(object sender, EventArgs e)
+        {
+            pbxDelete.BackColor = Color.Transparent;
+            lblDelete.Visible = false;
+        }
+
+        //Edit
+        private void pbxEdit_MouseEnter(object sender, EventArgs e)
+        {
+            pbxEdit.BackColor = Color.Gainsboro;
+            lblEdit.Visible = true;
+        }
+
+        private void pbxEdit_MouseLeave(object sender, EventArgs e)
+        {
+            pbxEdit.BackColor = Color.Transparent;
+            lblEdit.Visible = false;
+        }
+
+        //Add
+        private void pbxAdd_MouseEnter(object sender, EventArgs e)
+        {
+            pbxAdd.BackColor = Color.Gainsboro;
+            lblAdd.Visible = true;
+        }
+
+        private void pbxAdd_MouseLeave(object sender, EventArgs e)
+        {
+            pbxAdd.BackColor = Color.Transparent;
+            lblAdd.Visible = false;
+        }
+
+        //Back
+        private void pbxBack_MouseEnter(object sender, EventArgs e)
+        {
+            pbxBack.BackColor = Color.Gainsboro;
+            lblBack.Visible = true;
+        }
+
+        private void pbxBack_MouseLeave(object sender, EventArgs e)
+        {
+            pbxBack.BackColor = Color.Transparent;
+            lblBack.Visible = false;
         }
     }
 }

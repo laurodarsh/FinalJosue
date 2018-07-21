@@ -16,5 +16,17 @@ namespace ProjetoFinal.Forms
         {
             InitializeComponent();
         }
+        //Delete
+        private void pbxDelete_MouseEnter(object sender, EventArgs e)
+        {
+            pbxDelete.BackColor = Color.Gainsboro;
+            lblDelete.Visible = true;
+        }
+
+        private void pbxDelete_MouseLeave(object sender, EventArgs e)
+        {
+            pbxDelete.BackColor = Color.Transparent;
+            lblDelete.Visible = false;
+        }
     }
 }
