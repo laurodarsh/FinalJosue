@@ -30,6 +30,11 @@ namespace ProjetoFinal.Forms
             lblDelete.Visible = false;
         }
 
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Edit
         private void pbxEdit_MouseEnter(object sender, EventArgs e)
         {
@@ -41,6 +46,11 @@ namespace ProjetoFinal.Forms
         {
             pbxEdit.BackColor = Color.Transparent;
             lblEdit.Visible = false;
+        }
+
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+
         }
 
         //Add
@@ -56,6 +66,12 @@ namespace ProjetoFinal.Forms
             lblAdd.Visible = false;
         }
 
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            CategoryDetailsForm cd = new CategoryDetailsForm();
+            cd.Show();
+        }
+
         //Back
         private void pbxBack_MouseEnter(object sender, EventArgs e)
         {
@@ -67,6 +83,11 @@ namespace ProjetoFinal.Forms
         {
             pbxBack.BackColor = Color.Transparent;
             lblBack.Visible = false;
+        }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

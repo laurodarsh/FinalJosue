@@ -105,6 +105,9 @@
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxDelete.TabIndex = 19;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
+            this.pbxDelete.MouseEnter += new System.EventHandler(this.pbxDelete_MouseEnter);
+            this.pbxDelete.MouseLeave += new System.EventHandler(this.pbxDelete_MouseLeave);
             // 
             // pbxEdit
             // 
@@ -115,6 +118,9 @@
             this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxEdit.TabIndex = 18;
             this.pbxEdit.TabStop = false;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
+            this.pbxEdit.MouseEnter += new System.EventHandler(this.pbxEdit_MouseEnter);
+            this.pbxEdit.MouseLeave += new System.EventHandler(this.pbxEdit_MouseLeave);
             // 
             // pbxBack
             // 
@@ -125,6 +131,9 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxBack.TabIndex = 17;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
+            this.pbxBack.MouseEnter += new System.EventHandler(this.pbxBack_MouseEnter);
+            this.pbxBack.MouseLeave += new System.EventHandler(this.pbxBack_MouseLeave);
             // 
             // pbxAdd
             // 
@@ -135,6 +144,9 @@
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAdd.TabIndex = 16;
             this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
+            this.pbxAdd.MouseEnter += new System.EventHandler(this.pbxAdd_MouseEnter);
+            this.pbxAdd.MouseLeave += new System.EventHandler(this.pbxAdd_MouseLeave);
             // 
             // dataGridView1
             // 
