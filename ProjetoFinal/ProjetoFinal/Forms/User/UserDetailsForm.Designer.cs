@@ -44,7 +44,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxConfPassword = new System.Windows.Forms.TextBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
@@ -214,12 +214,12 @@
             this.lblEmail.TabIndex = 45;
             this.lblEmail.Text = "Email:";
             // 
-            // textBox1
+            // tbxConfPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(198, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 48;
+            this.tbxConfPassword.Location = new System.Drawing.Point(198, 109);
+            this.tbxConfPassword.Name = "tbxConfPassword";
+            this.tbxConfPassword.Size = new System.Drawing.Size(121, 20);
+            this.tbxConfPassword.TabIndex = 48;
             // 
             // lblConfirmPassword
             // 
@@ -236,7 +236,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxConfPassword);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.lblEmail);
@@ -255,7 +255,7 @@
             this.Controls.Add(this.lblActive);
             this.Controls.Add(this.lblName);
             this.Name = "UserDetailsForm";
-            this.Text = "Usuáriuo";
+            this.Text = "Usuário";
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
@@ -282,7 +282,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxConfPassword;
         private System.Windows.Forms.Label lblConfirmPassword;
     }
 }
