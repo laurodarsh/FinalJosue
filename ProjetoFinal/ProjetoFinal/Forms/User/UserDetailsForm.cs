@@ -14,7 +14,6 @@ namespace ProjetoFinal.Forms
 {
     public partial class UserDetailsForm : Form
     {
-        //
         string name = "";
         string email = "";
         string password = "";
