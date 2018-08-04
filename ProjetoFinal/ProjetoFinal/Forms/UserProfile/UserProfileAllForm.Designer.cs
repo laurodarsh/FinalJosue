@@ -32,7 +32,7 @@
             this.lblEdit = new System.Windows.Forms.Label();
             this.lblAdd = new System.Windows.Forms.Label();
             this.lblBack = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUserProfile = new System.Windows.Forms.DataGridView();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
@@ -40,7 +40,7 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxAdd = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -96,13 +96,20 @@
             this.lblBack.Text = "Voltar";
             this.lblBack.Visible = false;
             // 
-            // dataGridView1
+            // dgvUserProfile
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(410, 184);
-            this.dataGridView1.TabIndex = 39;
+            this.dgvUserProfile.AllowUserToAddRows = false;
+            this.dgvUserProfile.AllowUserToDeleteRows = false;
+            this.dgvUserProfile.AllowUserToResizeColumns = false;
+            this.dgvUserProfile.AllowUserToResizeRows = false;
+            this.dgvUserProfile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserProfile.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvUserProfile.Location = new System.Drawing.Point(12, 60);
+            this.dgvUserProfile.MultiSelect = false;
+            this.dgvUserProfile.Name = "dgvUserProfile";
+            this.dgvUserProfile.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUserProfile.Size = new System.Drawing.Size(410, 184);
+            this.dgvUserProfile.TabIndex = 39;
             // 
             // tbxSearch
             // 
@@ -197,13 +204,13 @@
             this.Controls.Add(this.pbxEdit);
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.pbxAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUserProfile);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Name = "UserProfileAllForm";
             this.Text = "Perfil de Usuário";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
@@ -224,7 +231,7 @@
         private System.Windows.Forms.PictureBox pbxEdit;
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.PictureBox pbxAdd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUserProfile;
         internal System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;

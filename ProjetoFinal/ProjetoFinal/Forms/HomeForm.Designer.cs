@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.lblCategory = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblLog = new System.Windows.Forms.Label();
+            this.lblUserProfile = new System.Windows.Forms.Label();
             this.pbxLog = new System.Windows.Forms.PictureBox();
             this.pbxUser = new System.Windows.Forms.PictureBox();
             this.pbxProduct = new System.Windows.Forms.PictureBox();
             this.pbxCategory = new System.Windows.Forms.PictureBox();
             this.pbxUserProfile = new System.Windows.Forms.PictureBox();
-            this.lblProduct = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblLog = new System.Windows.Forms.Label();
-            this.lblUserProfile = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
@@ -55,6 +55,50 @@
             this.lblCategory.TabIndex = 7;
             this.lblCategory.Text = "Categoria";
             this.lblCategory.Visible = false;
+            // 
+            // lblProduct
+            // 
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct.Location = new System.Drawing.Point(261, 124);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(50, 15);
+            this.lblProduct.TabIndex = 8;
+            this.lblProduct.Text = "Produto";
+            this.lblProduct.Visible = false;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(48, 249);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(50, 15);
+            this.lblUser.TabIndex = 9;
+            this.lblUser.Text = "Usuário";
+            this.lblUser.Visible = false;
+            // 
+            // lblLog
+            // 
+            this.lblLog.AutoSize = true;
+            this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLog.Location = new System.Drawing.Point(203, 249);
+            this.lblLog.Name = "lblLog";
+            this.lblLog.Size = new System.Drawing.Size(28, 15);
+            this.lblLog.TabIndex = 10;
+            this.lblLog.Text = "Log";
+            this.lblLog.Visible = false;
+            // 
+            // lblUserProfile
+            // 
+            this.lblUserProfile.AutoSize = true;
+            this.lblUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserProfile.Location = new System.Drawing.Point(307, 249);
+            this.lblUserProfile.Name = "lblUserProfile";
+            this.lblUserProfile.Size = new System.Drawing.Size(98, 15);
+            this.lblUserProfile.TabIndex = 11;
+            this.lblUserProfile.Text = "Perfil de Usuário";
+            this.lblUserProfile.Visible = false;
             // 
             // pbxLog
             // 
@@ -110,7 +154,7 @@
             // 
             // pbxUserProfile
             // 
-            this.pbxUserProfile.BackgroundImage = global::ProjetoFinal.Properties.Resources.community_icon_6;
+            this.pbxUserProfile.BackgroundImage = global::ProjetoFinal.Properties.Resources.cmicon;
             this.pbxUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxUserProfile.Location = new System.Drawing.Point(302, 173);
             this.pbxUserProfile.Name = "pbxUserProfile";
@@ -120,50 +164,6 @@
             this.pbxUserProfile.Click += new System.EventHandler(this.pbxUserProfile_Click);
             this.pbxUserProfile.MouseEnter += new System.EventHandler(this.pbxUserProfile_MouseEnter);
             this.pbxUserProfile.MouseLeave += new System.EventHandler(this.pbxUserProfile_MouseLeave);
-            // 
-            // lblProduct
-            // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduct.Location = new System.Drawing.Point(261, 124);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(50, 15);
-            this.lblProduct.TabIndex = 8;
-            this.lblProduct.Text = "Produto";
-            this.lblProduct.Visible = false;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(48, 249);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(50, 15);
-            this.lblUser.TabIndex = 9;
-            this.lblUser.Text = "Usuário";
-            this.lblUser.Visible = false;
-            // 
-            // lblLog
-            // 
-            this.lblLog.AutoSize = true;
-            this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLog.Location = new System.Drawing.Point(203, 249);
-            this.lblLog.Name = "lblLog";
-            this.lblLog.Size = new System.Drawing.Size(28, 15);
-            this.lblLog.TabIndex = 10;
-            this.lblLog.Text = "Log";
-            this.lblLog.Visible = false;
-            // 
-            // lblUserProfile
-            // 
-            this.lblUserProfile.AutoSize = true;
-            this.lblUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserProfile.Location = new System.Drawing.Point(307, 249);
-            this.lblUserProfile.Name = "lblUserProfile";
-            this.lblUserProfile.Size = new System.Drawing.Size(98, 15);
-            this.lblUserProfile.TabIndex = 11;
-            this.lblUserProfile.Text = "Perfil de Usuário";
-            this.lblUserProfile.Visible = false;
             // 
             // HomeForm
             // 

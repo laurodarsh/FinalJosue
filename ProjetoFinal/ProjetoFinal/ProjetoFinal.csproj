@@ -185,6 +185,8 @@
   <ItemGroup>
     <Content Include="Icons\828165_add_512x512.png" />
     <Content Include="Icons\circled-left-2.png" />
+    <None Include="Icons\cmicon.png" />
+    <Content Include="Icons\community-icon-1.png" />
     <Content Include="Icons\community-icon-6.png" />
     <Content Include="Icons\edit-icon-png-24.png" />
     <Content Include="Icons\img_176563.png" />
