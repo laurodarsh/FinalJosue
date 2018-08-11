@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinal.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,60 +68,6 @@ namespace ProjetoFinal.Forms
             }
         }
 
-        //Delete
-        private void pbxDelete_MouseEnter(object sender, EventArgs e)
-        {
-            pbxDelete.BackColor = Color.Gainsboro;
-            lblDelete.Visible = true;
-        }
-
-        private void pbxDelete_MouseLeave(object sender, EventArgs e)
-        {
-            pbxDelete.BackColor = Color.Transparent;
-            lblDelete.Visible = false;
-        }
-
-        private void pbxDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Edit
-        private void pbxEdit_MouseEnter(object sender, EventArgs e)
-        {
-            pbxEdit.BackColor = Color.Gainsboro;
-            lblEdit.Visible = true;
-        }
-
-        private void pbxEdit_MouseLeave(object sender, EventArgs e)
-        {
-            pbxEdit.BackColor = Color.Transparent;
-            lblEdit.Visible = false;
-        }
-
-        private void pbxEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Add
-        private void pbxAdd_MouseEnter(object sender, EventArgs e)
-        {
-            pbxAdd.BackColor = Color.Gainsboro;
-            lblAdd.Visible = true;
-        }
-
-        private void pbxAdd_MouseLeave(object sender, EventArgs e)
-        {
-            pbxAdd.BackColor = Color.Transparent;
-            lblAdd.Visible = false;
-        }
-
-        private void pbxAdd_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         //Back
         private void pbxBack_MouseEnter(object sender, EventArgs e)
         {
@@ -139,5 +86,22 @@ namespace ProjetoFinal.Forms
             this.Close();
         }
 
+        //Search
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+            string optionForm = "LogForm";
+            string optionString = "description";
+
+            Search search = new Search();
+            dgvLog.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
+        }
+
+        //Eraser
+        private void pbxEraser_Click(object sender, EventArgs e)
+        {
+            ShowData();
+        }
     }
 }

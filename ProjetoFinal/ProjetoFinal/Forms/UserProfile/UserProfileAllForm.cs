@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinal.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -139,5 +140,22 @@ namespace ProjetoFinal.Forms
             this.Close();
         }
 
+        //Search
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string optionForm = "UserProfileForm";
+            string optionString = "name";
+
+            Search search = new Search();
+            dgvUserProfile.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
+        }
+
+        //Eraser
+        private void pbxEraser_Click(object sender, EventArgs e)
+        {
+            ShowData();
+        }
     }
 }

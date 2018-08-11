@@ -124,13 +124,14 @@ namespace ProjetoFinal.Forms
                     SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
                     cmd.Parameters.Add(new SqlParameter("@name", name));
-                    cmd.Parameters.Add(new SqlParameter("@password", password));
+                    cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash(password)));
                     cmd.Parameters.Add(new SqlParameter("@email", email));
                     cmd.Parameters.Add(new SqlParameter("@active", active));
                     cmd.Parameters.Add(new SqlParameter("@profile", ((UserProfile)cmbProfile.SelectedItem).Id));
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SaveLog("Usuário Adicionado", "Adição", DateTime.Now);
                     CleanData();
                 }
                 else

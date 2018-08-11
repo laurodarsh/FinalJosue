@@ -154,7 +154,7 @@
             // 
             // pbxUserProfile
             // 
-            this.pbxUserProfile.BackgroundImage = global::ProjetoFinal.Properties.Resources.cmicon;
+            this.pbxUserProfile.BackgroundImage = global::ProjetoFinal.Properties.Resources._17_512;
             this.pbxUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxUserProfile.Location = new System.Drawing.Point(302, 173);
             this.pbxUserProfile.Name = "pbxUserProfile";

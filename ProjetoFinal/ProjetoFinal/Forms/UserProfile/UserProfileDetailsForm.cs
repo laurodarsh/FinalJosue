@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinal.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,6 +84,7 @@ namespace ProjetoFinal.Forms
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Adicionado com sucesso!");
+                Log.SaveLog("Perfil de Usuário Adicionado", "Adição", DateTime.Now);
                 CleanData();
 
             }

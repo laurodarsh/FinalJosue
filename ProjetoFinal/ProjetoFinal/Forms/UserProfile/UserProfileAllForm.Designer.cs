@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfileAllForm));
             this.lblDelete = new System.Windows.Forms.Label();
             this.lblEdit = new System.Windows.Forms.Label();
             this.lblAdd = new System.Windows.Forms.Label();
@@ -40,12 +41,14 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxAdd = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxEraser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEraser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDelete
@@ -53,7 +56,7 @@
             this.lblDelete.AutoSize = true;
             this.lblDelete.BackColor = System.Drawing.SystemColors.Control;
             this.lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDelete.Location = new System.Drawing.Point(371, 289);
+            this.lblDelete.Location = new System.Drawing.Point(371, 293);
             this.lblDelete.Name = "lblDelete";
             this.lblDelete.Size = new System.Drawing.Size(44, 15);
             this.lblDelete.TabIndex = 47;
@@ -65,7 +68,7 @@
             this.lblEdit.AutoSize = true;
             this.lblEdit.BackColor = System.Drawing.SystemColors.Control;
             this.lblEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdit.Location = new System.Drawing.Point(313, 289);
+            this.lblEdit.Location = new System.Drawing.Point(313, 293);
             this.lblEdit.Name = "lblEdit";
             this.lblEdit.Size = new System.Drawing.Size(39, 15);
             this.lblEdit.TabIndex = 46;
@@ -77,7 +80,7 @@
             this.lblAdd.AutoSize = true;
             this.lblAdd.BackColor = System.Drawing.SystemColors.Control;
             this.lblAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdd.Location = new System.Drawing.Point(241, 289);
+            this.lblAdd.Location = new System.Drawing.Point(241, 293);
             this.lblAdd.Name = "lblAdd";
             this.lblAdd.Size = new System.Drawing.Size(58, 15);
             this.lblAdd.TabIndex = 45;
@@ -89,7 +92,7 @@
             this.lblBack.AutoSize = true;
             this.lblBack.BackColor = System.Drawing.SystemColors.Control;
             this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBack.Location = new System.Drawing.Point(21, 289);
+            this.lblBack.Location = new System.Drawing.Point(21, 293);
             this.lblBack.Name = "lblBack";
             this.lblBack.Size = new System.Drawing.Size(38, 15);
             this.lblBack.TabIndex = 44;
@@ -115,7 +118,7 @@
             // 
             this.tbxSearch.Location = new System.Drawing.Point(106, 21);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(261, 20);
+            this.tbxSearch.Size = new System.Drawing.Size(193, 20);
             this.tbxSearch.TabIndex = 37;
             // 
             // lblSearch
@@ -131,7 +134,7 @@
             // pbxDelete
             // 
             this.pbxDelete.Image = global::ProjetoFinal.Properties.Resources.img_275374;
-            this.pbxDelete.Location = new System.Drawing.Point(365, 250);
+            this.pbxDelete.Location = new System.Drawing.Point(365, 254);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(55, 40);
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +147,7 @@
             // pbxEdit
             // 
             this.pbxEdit.Image = global::ProjetoFinal.Properties.Resources.edit_icon_png_24;
-            this.pbxEdit.Location = new System.Drawing.Point(304, 250);
+            this.pbxEdit.Location = new System.Drawing.Point(304, 254);
             this.pbxEdit.Name = "pbxEdit";
             this.pbxEdit.Size = new System.Drawing.Size(55, 40);
             this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +160,7 @@
             // pbxBack
             // 
             this.pbxBack.Image = global::ProjetoFinal.Properties.Resources.circled_left_2;
-            this.pbxBack.Location = new System.Drawing.Point(12, 250);
+            this.pbxBack.Location = new System.Drawing.Point(12, 254);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(55, 40);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -169,8 +172,8 @@
             // 
             // pbxAdd
             // 
-            this.pbxAdd.Image = global::ProjetoFinal.Properties.Resources._828165_add_512x512;
-            this.pbxAdd.Location = new System.Drawing.Point(243, 250);
+            this.pbxAdd.Image = ((System.Drawing.Image)(resources.GetObject("pbxAdd.Image")));
+            this.pbxAdd.Location = new System.Drawing.Point(243, 254);
             this.pbxAdd.Name = "pbxAdd";
             this.pbxAdd.Size = new System.Drawing.Size(55, 40);
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,20 +185,36 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox1.Image = global::ProjetoFinal.Properties.Resources.img_176563;
-            this.pictureBox1.Location = new System.Drawing.Point(377, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(324, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pbxEraser
+            // 
+            this.pbxEraser.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pbxEraser.Image = global::ProjetoFinal.Properties.Resources.eraser_61_380829;
+            this.pbxEraser.Location = new System.Drawing.Point(387, 16);
+            this.pbxEraser.Name = "pbxEraser";
+            this.pbxEraser.Size = new System.Drawing.Size(35, 31);
+            this.pbxEraser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxEraser.TabIndex = 48;
+            this.pbxEraser.TabStop = false;
+            this.pbxEraser.UseWaitCursor = true;
+            this.pbxEraser.Click += new System.EventHandler(this.pbxEraser_Click);
             // 
             // UserProfileAllForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.pbxEraser);
             this.Controls.Add(this.lblDelete);
             this.Controls.Add(this.lblEdit);
             this.Controls.Add(this.lblAdd);
@@ -216,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEraser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +255,6 @@
         internal System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;
+        internal System.Windows.Forms.PictureBox pbxEraser;
     }
 }

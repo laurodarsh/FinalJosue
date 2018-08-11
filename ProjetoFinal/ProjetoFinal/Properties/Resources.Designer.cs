@@ -63,6 +63,16 @@ namespace ProjetoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _17_512 {
+            get {
+                object obj = ResourceManager.GetObject("_17_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _828165_add_512x512 {
             get {
                 object obj = ResourceManager.GetObject("_828165_add_512x512", resourceCulture);
@@ -116,6 +126,16 @@ namespace ProjetoFinal.Properties {
         internal static System.Drawing.Bitmap edit_icon_png_24 {
             get {
                 object obj = ResourceManager.GetObject("edit_icon_png_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eraser_61_380829 {
+            get {
+                object obj = ResourceManager.GetObject("eraser_61_380829", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

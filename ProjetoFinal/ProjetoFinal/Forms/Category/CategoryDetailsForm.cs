@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinal.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,6 +85,7 @@ namespace ProjetoFinal.Forms
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Adicionado com sucesso!");
+                Log.SaveLog("Categoria Adicionada", "Adição", DateTime.Now);
                 CleanData();
 
             }

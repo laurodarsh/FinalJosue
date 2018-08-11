@@ -122,6 +122,7 @@ namespace ProjetoFinal.Forms
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Adicionado com sucesso!");
+                Log.SaveLog("Produto Adicionado", "Adição", DateTime.Now);
                 CleanData();
 
             }
