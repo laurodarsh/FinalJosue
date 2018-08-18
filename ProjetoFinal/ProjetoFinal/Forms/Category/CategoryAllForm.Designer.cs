@@ -133,6 +133,7 @@
             // 
             // pbxDelete
             // 
+            this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxDelete.Image = global::ProjetoFinal.Properties.Resources.img_275374;
             this.pbxDelete.Location = new System.Drawing.Point(365, 254);
             this.pbxDelete.Name = "pbxDelete";
@@ -146,6 +147,7 @@
             // 
             // pbxEdit
             // 
+            this.pbxEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxEdit.Image = global::ProjetoFinal.Properties.Resources.edit_icon_png_24;
             this.pbxEdit.Location = new System.Drawing.Point(304, 254);
             this.pbxEdit.Name = "pbxEdit";
@@ -159,6 +161,7 @@
             // 
             // pbxBack
             // 
+            this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::ProjetoFinal.Properties.Resources.circled_left_2;
             this.pbxBack.Location = new System.Drawing.Point(12, 254);
             this.pbxBack.Name = "pbxBack";
@@ -172,6 +175,7 @@
             // 
             // pbxAdd
             // 
+            this.pbxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxAdd.Image = ((System.Drawing.Image)(resources.GetObject("pbxAdd.Image")));
             this.pbxAdd.Location = new System.Drawing.Point(243, 254);
             this.pbxAdd.Name = "pbxAdd";
@@ -185,7 +189,7 @@
             // 
             // pbxSearch
             // 
-            this.pbxSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Image = global::ProjetoFinal.Properties.Resources.img_176563;
             this.pbxSearch.Location = new System.Drawing.Point(324, 16);
             this.pbxSearch.Name = "pbxSearch";
@@ -193,12 +197,11 @@
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSearch.TabIndex = 2;
             this.pbxSearch.TabStop = false;
-            this.pbxSearch.UseWaitCursor = true;
             this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // pbxEraser
             // 
-            this.pbxEraser.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pbxEraser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxEraser.Image = global::ProjetoFinal.Properties.Resources.eraser_61_380829;
             this.pbxEraser.Location = new System.Drawing.Point(387, 16);
             this.pbxEraser.Name = "pbxEraser";
@@ -206,7 +209,6 @@
             this.pbxEraser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxEraser.TabIndex = 12;
             this.pbxEraser.TabStop = false;
-            this.pbxEraser.UseWaitCursor = true;
             this.pbxEraser.Click += new System.EventHandler(this.pbxEraser_Click);
             // 
             // CategoryAllForm

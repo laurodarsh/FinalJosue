@@ -15,11 +15,12 @@ namespace ProjetoFinal.Forms
     public partial class ProductAllForm : Form
     {
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
+        User aux = new User();
 
-        public ProductAllForm()
+        public ProductAllForm(User user)
         {
             InitializeComponent();
-
+            aux = user;
             ShowData();
             ResizeDataGridView();
         }
@@ -27,13 +28,21 @@ namespace ProjetoFinal.Forms
         private void ShowData()
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
+            SqlCommand cmd;
 
             try
             {
                 sqlConnect.Open();
+                if (aux.UserProfile.Id != 3)
+                {
+                    cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID WHERE PRODUCT.ACTIVE = @active", sqlConnect);
+                    cmd.Parameters.Add(new SqlParameter("@active", true));
 
-                SqlCommand cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID", sqlConnect);
-                // SqlDataReader reader = cmd.ExecuteReader();
+                }
+                else
+                {
+                    cmd = new SqlCommand("SELECT PRODUCT.ID, PRODUCT.NAME, PRODUCT.ACTIVE, PRODUCT.PRICE, CATEGORY.NAME FROM PRODUCT INNER JOIN CATEGORY ON PRODUCT.FK_PRODUCT = CATEGORY.ID", sqlConnect);
+                }
 
                 cmd.ExecuteNonQuery();
 

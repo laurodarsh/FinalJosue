@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinal.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,27 @@ namespace ProjetoFinal.Forms
 {
     public partial class HomeForm : Form
     {
-        public HomeForm()
+        User aux = new User();
+        public HomeForm(User user)
         {
             InitializeComponent();
+
+            if (user.UserProfile.Id != 3)
+            {
+                pbxLog.BackColor = Color.Gray;
+                pbxLog.Enabled = false;
+                pbxUser.BackColor = Color.Gray;
+                pbxUser.Enabled = false;
+                pbxUserProfile.BackColor = Color.Gray;
+                pbxUserProfile.Enabled = false;
+            }
+            aux = user;
+            lblOnline.Text = "olá " + user.Name;
         }
         //Category
         private void pbxCategory_Click(object sender, EventArgs e)
         {
-            CategoryAllForm c = new CategoryAllForm();
+            CategoryAllForm c = new CategoryAllForm(aux);
             c.Show();
         }
 
@@ -39,7 +53,7 @@ namespace ProjetoFinal.Forms
         //Product
         private void pbxProduct_Click(object sender, EventArgs e)
         {
-            ProductAllForm p = new ProductAllForm();
+            ProductAllForm p = new ProductAllForm(aux);
             p.Show();
         }
 

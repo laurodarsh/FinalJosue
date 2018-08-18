@@ -117,6 +117,7 @@
             // 
             // pbxSave
             // 
+            this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSave.Image = global::ProjetoFinal.Properties.Resources.img_433078;
             this.pbxSave.Location = new System.Drawing.Point(304, 250);
             this.pbxSave.Name = "pbxSave";
@@ -130,6 +131,7 @@
             // 
             // pbxDelete
             // 
+            this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxDelete.Image = global::ProjetoFinal.Properties.Resources.img_275374;
             this.pbxDelete.Location = new System.Drawing.Point(365, 250);
             this.pbxDelete.Name = "pbxDelete";
@@ -143,6 +145,7 @@
             // 
             // pbxBack
             // 
+            this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::ProjetoFinal.Properties.Resources.circled_left_2;
             this.pbxBack.Location = new System.Drawing.Point(12, 250);
             this.pbxBack.Name = "pbxBack";

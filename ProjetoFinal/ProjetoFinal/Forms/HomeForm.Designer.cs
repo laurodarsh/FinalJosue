@@ -38,6 +38,7 @@
             this.pbxProduct = new System.Windows.Forms.PictureBox();
             this.pbxCategory = new System.Windows.Forms.PictureBox();
             this.pbxUserProfile = new System.Windows.Forms.PictureBox();
+            this.lblOnline = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
@@ -104,6 +105,7 @@
             // 
             this.pbxLog.BackgroundImage = global::ProjetoFinal.Properties.Resources.log;
             this.pbxLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxLog.Location = new System.Drawing.Point(161, 173);
             this.pbxLog.Name = "pbxLog";
             this.pbxLog.Size = new System.Drawing.Size(106, 73);
@@ -117,6 +119,7 @@
             // 
             this.pbxUser.BackgroundImage = global::ProjetoFinal.Properties.Resources.user_male2_512;
             this.pbxUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUser.Location = new System.Drawing.Point(21, 173);
             this.pbxUser.Name = "pbxUser";
             this.pbxUser.Size = new System.Drawing.Size(106, 73);
@@ -130,6 +133,7 @@
             // 
             this.pbxProduct.BackgroundImage = global::ProjetoFinal.Properties.Resources.img_231353;
             this.pbxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxProduct.Location = new System.Drawing.Point(232, 48);
             this.pbxProduct.Name = "pbxProduct";
             this.pbxProduct.Size = new System.Drawing.Size(106, 73);
@@ -143,6 +147,7 @@
             // 
             this.pbxCategory.BackgroundImage = global::ProjetoFinal.Properties.Resources.img_208889;
             this.pbxCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxCategory.Location = new System.Drawing.Point(94, 48);
             this.pbxCategory.Name = "pbxCategory";
             this.pbxCategory.Size = new System.Drawing.Size(106, 73);
@@ -156,6 +161,7 @@
             // 
             this.pbxUserProfile.BackgroundImage = global::ProjetoFinal.Properties.Resources._17_512;
             this.pbxUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUserProfile.Location = new System.Drawing.Point(302, 173);
             this.pbxUserProfile.Name = "pbxUserProfile";
             this.pbxUserProfile.Size = new System.Drawing.Size(106, 73);
@@ -165,11 +171,22 @@
             this.pbxUserProfile.MouseEnter += new System.EventHandler(this.pbxUserProfile_MouseEnter);
             this.pbxUserProfile.MouseLeave += new System.EventHandler(this.pbxUserProfile_MouseLeave);
             // 
+            // lblOnline
+            // 
+            this.lblOnline.AutoSize = true;
+            this.lblOnline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOnline.Location = new System.Drawing.Point(336, 293);
+            this.lblOnline.Name = "lblOnline";
+            this.lblOnline.Size = new System.Drawing.Size(83, 15);
+            this.lblOnline.TabIndex = 12;
+            this.lblOnline.Text = "Olá Usuário";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.lblOnline);
             this.Controls.Add(this.lblUserProfile);
             this.Controls.Add(this.lblLog);
             this.Controls.Add(this.lblUser);
@@ -204,5 +221,6 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblLog;
         private System.Windows.Forms.Label lblUserProfile;
+        private System.Windows.Forms.Label lblOnline;
     }
 }

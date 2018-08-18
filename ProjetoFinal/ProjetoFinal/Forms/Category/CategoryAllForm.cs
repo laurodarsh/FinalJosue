@@ -15,11 +15,11 @@ namespace ProjetoFinal.Forms
     public partial class CategoryAllForm : Form
     {
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
-
-        public CategoryAllForm()
+        User aux = new User();
+        public CategoryAllForm(User user)
         {
             InitializeComponent();
-
+            aux = user;
             ShowData();
             ResizeDataGridView();
         }
@@ -30,11 +30,23 @@ namespace ProjetoFinal.Forms
 
             try
             {
+                string sql;
                 sqlConnect.Open();
+                if (aux.UserProfile.Id != 3)
+                {
+                    sql = "SELECT * FROM CATEGORY WHERE ACTIVE = @active";
+                  
+                }
+                else
+                {
+                    sql = "SELECT * FROM CATEGORY";
+                }
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM CATEGORY", sqlConnect);
-                // SqlDataReader reader = cmd.ExecuteReader();
-
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                if (aux.UserProfile.Id != 3)
+                {
+                    cmd.Parameters.Add(new SqlParameter("@active", true));
+                }
                 cmd.ExecuteNonQuery();
 
                 DataTable dt = new DataTable();
