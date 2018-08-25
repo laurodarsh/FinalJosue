@@ -23,6 +23,54 @@ namespace ProjetoFinal.Forms
             InitializeComponent();
         }
 
+        public UserProfileDetailsForm(int idUserProfile)
+        {
+            InitializeComponent();
+
+            lblId.Text = idUserProfile.ToString();
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM USER_PROFILE WHERE ID = @id", sqlConnect);
+                    //SqlCommand cmd = new SqlCommand("SELECT * FROM USER_PROFILE WHERE ID = " + idUser_Profile.ToString(), sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idUserProfile));
+
+                    UserProfile userProfile = new UserProfile();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader()) //-----
+                    {
+                        while (reader.Read())
+                        {
+                            userProfile.Id = Int32.Parse(reader["ID"].ToString());
+                            userProfile.Name = reader["NAME"].ToString();
+                            userProfile.Active = bool.Parse(reader["ACTIVE"].ToString());
+                        }
+                    }
+
+                    tbxName.Text = userProfile.Name;
+                    cbxActive.Checked = userProfile.Active;
+
+
+                }
+                catch (Exception EX)
+                {
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+        }
+
         void GetData()
         {
             name = tbxName.Text;
@@ -50,7 +98,36 @@ namespace ProjetoFinal.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
+                try
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE USER_PROFILE SET ACTIVE = @active WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                    cmd.ExecuteNonQuery();
+
+                    Log.SaveLog("Perfil de Usuário Excluído", "Exclusão", DateTime.Now);
+
+                    MessageBox.Show("perfil de usuário inativo!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao desativar este perfil de usuário!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
         }
 
         //Save

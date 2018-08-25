@@ -95,7 +95,34 @@ namespace ProjetoFinal.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            int idProduct = Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
 
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+                string sql = "UPDATE PRODUCT SET ACTIVE = @active WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idProduct));
+                cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Produto inativo!");
+                Log.SaveLog("Produto Excluído", "Exclusão", DateTime.Now);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro ao excluir este produto!" + "\n\n" + Ex.Message);
+                throw;
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
         }
 
         //Edit
@@ -113,7 +140,12 @@ namespace ProjetoFinal.Forms
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
+            int idProduct= Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
 
+            ProductDetailsForm productDetails = new ProductDetailsForm(idProduct, aux);
+            productDetails.Show();
+
+            this.Close();
         }
 
         //Add
@@ -131,7 +163,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            ProductDetailsForm pd = new ProductDetailsForm();
+            ProductDetailsForm pd = new ProductDetailsForm(aux);
             pd.Show();
         }
 

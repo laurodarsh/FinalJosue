@@ -33,24 +33,29 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.lblLog = new System.Windows.Forms.Label();
             this.lblUserProfile = new System.Windows.Forms.Label();
+            this.lblOnline = new System.Windows.Forms.Label();
+            this.lblLogOff = new System.Windows.Forms.Label();
+            this.pbxLogOff = new System.Windows.Forms.PictureBox();
             this.pbxLog = new System.Windows.Forms.PictureBox();
             this.pbxUser = new System.Windows.Forms.PictureBox();
             this.pbxProduct = new System.Windows.Forms.PictureBox();
             this.pbxCategory = new System.Windows.Forms.PictureBox();
             this.pbxUserProfile = new System.Windows.Forms.PictureBox();
-            this.lblOnline = new System.Windows.Forms.Label();
+            this.pbxOnline = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogOff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOnline)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(117, 124);
+            this.lblCategory.Location = new System.Drawing.Point(117, 100);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(60, 15);
             this.lblCategory.TabIndex = 7;
@@ -61,7 +66,7 @@
             // 
             this.lblProduct.AutoSize = true;
             this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduct.Location = new System.Drawing.Point(261, 124);
+            this.lblProduct.Location = new System.Drawing.Point(261, 100);
             this.lblProduct.Name = "lblProduct";
             this.lblProduct.Size = new System.Drawing.Size(50, 15);
             this.lblProduct.TabIndex = 8;
@@ -72,7 +77,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(48, 249);
+            this.lblUser.Location = new System.Drawing.Point(48, 225);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(50, 15);
             this.lblUser.TabIndex = 9;
@@ -83,7 +88,7 @@
             // 
             this.lblLog.AutoSize = true;
             this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLog.Location = new System.Drawing.Point(203, 249);
+            this.lblLog.Location = new System.Drawing.Point(203, 225);
             this.lblLog.Name = "lblLog";
             this.lblLog.Size = new System.Drawing.Size(28, 15);
             this.lblLog.TabIndex = 10;
@@ -94,19 +99,55 @@
             // 
             this.lblUserProfile.AutoSize = true;
             this.lblUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserProfile.Location = new System.Drawing.Point(307, 249);
+            this.lblUserProfile.Location = new System.Drawing.Point(307, 225);
             this.lblUserProfile.Name = "lblUserProfile";
             this.lblUserProfile.Size = new System.Drawing.Size(98, 15);
             this.lblUserProfile.TabIndex = 11;
             this.lblUserProfile.Text = "Perfil de Usuário";
             this.lblUserProfile.Visible = false;
             // 
+            // lblOnline
+            // 
+            this.lblOnline.AutoSize = true;
+            this.lblOnline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOnline.Location = new System.Drawing.Point(332, 289);
+            this.lblOnline.Name = "lblOnline";
+            this.lblOnline.Size = new System.Drawing.Size(83, 15);
+            this.lblOnline.TabIndex = 12;
+            this.lblOnline.Text = "Olá Usuário";
+            // 
+            // lblLogOff
+            // 
+            this.lblLogOff.AutoSize = true;
+            this.lblLogOff.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLogOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogOff.Location = new System.Drawing.Point(25, 293);
+            this.lblLogOff.Name = "lblLogOff";
+            this.lblLogOff.Size = new System.Drawing.Size(29, 15);
+            this.lblLogOff.TabIndex = 45;
+            this.lblLogOff.Text = "Sair";
+            this.lblLogOff.Visible = false;
+            // 
+            // pbxLogOff
+            // 
+            this.pbxLogOff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxLogOff.Image = global::ProjetoFinal.Properties.Resources.Minio_Devices_and_Hardware_Bold_90_512;
+            this.pbxLogOff.Location = new System.Drawing.Point(12, 254);
+            this.pbxLogOff.Name = "pbxLogOff";
+            this.pbxLogOff.Size = new System.Drawing.Size(55, 40);
+            this.pbxLogOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLogOff.TabIndex = 42;
+            this.pbxLogOff.TabStop = false;
+            this.pbxLogOff.Click += new System.EventHandler(this.pbxLogOff_Click);
+            this.pbxLogOff.MouseEnter += new System.EventHandler(this.pbxLogOff_MouseEnter);
+            this.pbxLogOff.MouseLeave += new System.EventHandler(this.pbxLogOff_MouseLeave);
+            // 
             // pbxLog
             // 
             this.pbxLog.BackgroundImage = global::ProjetoFinal.Properties.Resources.log;
             this.pbxLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxLog.Location = new System.Drawing.Point(161, 173);
+            this.pbxLog.Location = new System.Drawing.Point(161, 149);
             this.pbxLog.Name = "pbxLog";
             this.pbxLog.Size = new System.Drawing.Size(106, 73);
             this.pbxLog.TabIndex = 6;
@@ -120,7 +161,7 @@
             this.pbxUser.BackgroundImage = global::ProjetoFinal.Properties.Resources.user_male2_512;
             this.pbxUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxUser.Location = new System.Drawing.Point(21, 173);
+            this.pbxUser.Location = new System.Drawing.Point(21, 149);
             this.pbxUser.Name = "pbxUser";
             this.pbxUser.Size = new System.Drawing.Size(106, 73);
             this.pbxUser.TabIndex = 5;
@@ -134,7 +175,7 @@
             this.pbxProduct.BackgroundImage = global::ProjetoFinal.Properties.Resources.img_231353;
             this.pbxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxProduct.Location = new System.Drawing.Point(232, 48);
+            this.pbxProduct.Location = new System.Drawing.Point(232, 24);
             this.pbxProduct.Name = "pbxProduct";
             this.pbxProduct.Size = new System.Drawing.Size(106, 73);
             this.pbxProduct.TabIndex = 4;
@@ -148,7 +189,7 @@
             this.pbxCategory.BackgroundImage = global::ProjetoFinal.Properties.Resources.img_208889;
             this.pbxCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxCategory.Location = new System.Drawing.Point(94, 48);
+            this.pbxCategory.Location = new System.Drawing.Point(94, 24);
             this.pbxCategory.Name = "pbxCategory";
             this.pbxCategory.Size = new System.Drawing.Size(106, 73);
             this.pbxCategory.TabIndex = 3;
@@ -162,7 +203,7 @@
             this.pbxUserProfile.BackgroundImage = global::ProjetoFinal.Properties.Resources._17_512;
             this.pbxUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxUserProfile.Location = new System.Drawing.Point(302, 173);
+            this.pbxUserProfile.Location = new System.Drawing.Point(302, 149);
             this.pbxUserProfile.Name = "pbxUserProfile";
             this.pbxUserProfile.Size = new System.Drawing.Size(106, 73);
             this.pbxUserProfile.TabIndex = 2;
@@ -171,21 +212,25 @@
             this.pbxUserProfile.MouseEnter += new System.EventHandler(this.pbxUserProfile_MouseEnter);
             this.pbxUserProfile.MouseLeave += new System.EventHandler(this.pbxUserProfile_MouseLeave);
             // 
-            // lblOnline
+            // pbxOnline
             // 
-            this.lblOnline.AutoSize = true;
-            this.lblOnline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOnline.Location = new System.Drawing.Point(336, 293);
-            this.lblOnline.Name = "lblOnline";
-            this.lblOnline.Size = new System.Drawing.Size(83, 15);
-            this.lblOnline.TabIndex = 12;
-            this.lblOnline.Text = "Olá Usuário";
+            this.pbxOnline.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbxOnline.Image = global::ProjetoFinal.Properties.Resources.gender_neutral_user;
+            this.pbxOnline.Location = new System.Drawing.Point(305, 284);
+            this.pbxOnline.Name = "pbxOnline";
+            this.pbxOnline.Size = new System.Drawing.Size(28, 24);
+            this.pbxOnline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxOnline.TabIndex = 46;
+            this.pbxOnline.TabStop = false;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.pbxOnline);
+            this.Controls.Add(this.lblLogOff);
+            this.Controls.Add(this.pbxLogOff);
             this.Controls.Add(this.lblOnline);
             this.Controls.Add(this.lblUserProfile);
             this.Controls.Add(this.lblLog);
@@ -199,11 +244,13 @@
             this.Controls.Add(this.pbxUserProfile);
             this.Name = "HomeForm";
             this.Text = "HomeForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogOff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxOnline)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +269,8 @@
         private System.Windows.Forms.Label lblLog;
         private System.Windows.Forms.Label lblUserProfile;
         private System.Windows.Forms.Label lblOnline;
+        private System.Windows.Forms.PictureBox pbxLogOff;
+        private System.Windows.Forms.Label lblLogOff;
+        private System.Windows.Forms.PictureBox pbxOnline;
     }
 }

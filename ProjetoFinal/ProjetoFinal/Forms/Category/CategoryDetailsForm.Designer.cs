@@ -38,6 +38,7 @@
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.lblSave = new System.Windows.Forms.Label();
             this.cbxActive = new System.Windows.Forms.CheckBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
@@ -157,11 +158,22 @@
             this.cbxActive.TabIndex = 16;
             this.cbxActive.UseVisualStyleBackColor = true;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(148, 277);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.TabIndex = 17;
+            this.lblId.Text = "ID";
+            this.lblId.Visible = false;
+            // 
             // CategoryDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.lblSave);
             this.Controls.Add(this.pbxSave);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.Label lblSave;
         private System.Windows.Forms.CheckBox cbxActive;
+        private System.Windows.Forms.Label lblId;
     }
 }

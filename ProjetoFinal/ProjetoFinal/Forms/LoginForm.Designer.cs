@@ -73,6 +73,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(106, 166);
             this.btnLogin.Name = "btnLogin";
@@ -84,6 +85,7 @@
             // 
             // btnLostPassword
             // 
+            this.btnLostPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLostPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLostPassword.Location = new System.Drawing.Point(234, 166);
             this.btnLostPassword.Name = "btnLostPassword";

@@ -42,6 +42,7 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -196,11 +197,22 @@
             this.cmbCategory.Size = new System.Drawing.Size(121, 21);
             this.cmbCategory.TabIndex = 30;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(170, 277);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.TabIndex = 31;
+            this.lblId.Text = "ID";
+            this.lblId.Visible = false;
+            // 
             // ProductDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.tbxPrice);
@@ -241,5 +253,6 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.ComboBox cmbCategory;
+        private System.Windows.Forms.Label lblId;
     }
 }

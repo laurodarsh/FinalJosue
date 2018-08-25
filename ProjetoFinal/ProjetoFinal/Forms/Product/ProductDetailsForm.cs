@@ -18,13 +18,69 @@ namespace ProjetoFinal.Forms
         bool active = false;
         float price = 0;
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
+        User aux;
         List<Category> categories = new List<Category>();
 
-        public ProductDetailsForm()
+        public ProductDetailsForm(User user)
         {
             InitializeComponent();
             cmbCategory.DisplayMember = "NAME";
             LoadComboBox();
+            aux = user;
+        }
+
+        public ProductDetailsForm(int idProduct, User user)
+        {
+            InitializeComponent();
+            cmbCategory.DisplayMember = "NAME";
+            LoadComboBox();
+            aux = user;
+
+            lblId.Text = idProduct.ToString();
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM PRODUCT WHERE ID = @id", sqlConnect);
+                    //SqlCommand cmd = new SqlCommand("SELECT * FROM PRODUCT WHERE ID = " + idProduct.ToString(), sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idProduct));
+
+                    Product product = new Product();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            product.Id = Int32.Parse(reader["ID"].ToString());
+                            product.Name = reader["NAME"].ToString();
+                            product.Active = bool.Parse(reader["ACTIVE"].ToString());
+                            product.Price = float.Parse(reader["PRICE"].ToString());
+                            product.Category.Id = Int32.Parse(reader["ID"].ToString());
+                        }
+                    }
+
+                    tbxName.Text = product.Name;
+                    cbxActive.Checked = product.Active;
+                    tbxPrice.Text = product.Price.ToString();
+
+
+                }
+                catch (Exception EX)
+                {
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
         }
 
         void LoadComboBox()
@@ -87,7 +143,35 @@ namespace ProjetoFinal.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
+                try
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE PRODUCT SET ACTIVE = @active WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                    cmd.ExecuteNonQuery();
+
+                    Log.SaveLog("Produto Excluído", "Exclusão", DateTime.Now);
+                    MessageBox.Show("produto inativo!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao desativar este produto!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
         }
 
         //Save

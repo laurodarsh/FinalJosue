@@ -143,6 +143,16 @@ namespace ProjetoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gender_neutral_user {
+            get {
+                object obj = ResourceManager.GetObject("gender_neutral_user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_176563 {
             get {
                 object obj = ResourceManager.GetObject("img_176563", resourceCulture);
@@ -196,6 +206,16 @@ namespace ProjetoFinal.Properties {
         internal static System.Drawing.Bitmap log {
             get {
                 object obj = ResourceManager.GetObject("log", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minio_Devices_and_Hardware_Bold_90_512 {
+            get {
+                object obj = ResourceManager.GetObject("Minio_Devices_and_Hardware_Bold_90_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

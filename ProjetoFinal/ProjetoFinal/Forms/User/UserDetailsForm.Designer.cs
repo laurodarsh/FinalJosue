@@ -46,6 +46,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.tbxConfPassword = new System.Windows.Forms.TextBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -234,11 +235,22 @@
             this.lblConfirmPassword.TabIndex = 47;
             this.lblConfirmPassword.Text = "Conf. Senha:";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(195, 277);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.TabIndex = 49;
+            this.lblId.Text = "ID";
+            this.lblId.Visible = false;
+            // 
             // UserDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.tbxConfPassword);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.tbxEmail);
@@ -287,5 +299,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox tbxConfPassword;
         private System.Windows.Forms.Label lblConfirmPassword;
+        private System.Windows.Forms.Label lblId;
     }
 }

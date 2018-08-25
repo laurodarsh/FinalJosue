@@ -125,5 +125,23 @@ namespace ProjetoFinal.Forms
             pbxUserProfile.BackColor = Color.Transparent;
             lblUserProfile.Visible = false;
         }
+
+        //LogOff
+        private void pbxLogOff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxLogOff_MouseEnter(object sender, EventArgs e)
+        {
+            pbxLogOff.BackColor = Color.Gainsboro;
+            lblLogOff.Visible = true;
+        }
+
+        private void pbxLogOff_MouseLeave(object sender, EventArgs e)
+        {
+            pbxLogOff.BackColor = Color.Transparent;
+            lblLogOff.Visible = false;
+        }
     }
 }

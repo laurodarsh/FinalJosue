@@ -82,8 +82,35 @@ namespace ProjetoFinal.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            int idUserProfile = Int32.Parse(dgvUserProfile.SelectedRows[0].Cells[0].Value.ToString());
 
-        }
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnect.Open();
+                string sql = "UPDATE USER_PROFILE SET ACTIVE = @active WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idUserProfile));
+                cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Perfil de usuário inativo!");
+                Log.SaveLog("Perfil de Usuário Excluído", "Exclusão", DateTime.Now);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Erro ao excluir este perfil de usuário!" + "\n\n" + Ex.Message);
+                throw;
+            }
+            finally
+            {
+                sqlConnect.Close();
+            }
+    }
 
         //Edit
         private void pbxEdit_MouseEnter(object sender, EventArgs e)
@@ -100,7 +127,12 @@ namespace ProjetoFinal.Forms
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
+            int idUserProfile = Int32.Parse(dgvUserProfile.SelectedRows[0].Cells[0].Value.ToString());
 
+            UserProfileDetailsForm UserProfileDetails = new UserProfileDetailsForm(idUserProfile);
+            UserProfileDetails.Show();
+
+            this.Close();
         }
 
         //Add
