@@ -139,7 +139,7 @@
             this.lblBack.AutoSize = true;
             this.lblBack.BackColor = System.Drawing.SystemColors.Control;
             this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBack.Location = new System.Drawing.Point(21, 289);
+            this.lblBack.Location = new System.Drawing.Point(21, 293);
             this.lblBack.Name = "lblBack";
             this.lblBack.Size = new System.Drawing.Size(38, 15);
             this.lblBack.TabIndex = 36;
@@ -164,7 +164,7 @@
             // 
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Image = global::ProjetoFinal.Properties.Resources.circled_left_2;
-            this.pbxBack.Location = new System.Drawing.Point(12, 250);
+            this.pbxBack.Location = new System.Drawing.Point(12, 254);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(55, 40);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -240,9 +240,8 @@
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(195, 277);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.Size = new System.Drawing.Size(0, 13);
             this.lblId.TabIndex = 49;
-            this.lblId.Text = "ID";
             this.lblId.Visible = false;
             // 
             // UserDetailsForm

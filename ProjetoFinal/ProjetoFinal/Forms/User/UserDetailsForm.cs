@@ -22,11 +22,74 @@ namespace ProjetoFinal.Forms
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
         List<UserProfile> profiles = new List<UserProfile>();
 
+        public UserDetailsForm(int idUser)
+        {
+            InitializeComponent();
+
+            lblId.Text = idUser.ToString();
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM [USER] WHERE ID = @id", sqlConnect);
+                    //SqlCommand cmd = new SqlCommand("SELECT * FROM USER WHERE ID = " + idUser_Profile.ToString(), sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idUser));
+
+                    User user = new User();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            user.Id = Int32.Parse(reader["ID"].ToString());
+                            user.Name = reader["NAME"].ToString();
+                            user.Active = bool.Parse(reader["ACTIVE"].ToString());
+                            user.Email = reader["EMAIL"].ToString();
+                            user.Password = reader["PASSWORD"].ToString();
+                        }
+                    }
+
+                    tbxName.Text = user.Name;
+                    cbxActive.Checked = user.Active;
+                    tbxEmail.Text = user.Email;
+                    tbxPassword.Text = user.Password;
+
+                }
+                catch (Exception EX)
+                {
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+        }
+
         public UserDetailsForm()
         {
             InitializeComponent();
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
+        }
+
+        void GetData()
+        {
+            name = tbxName.Text;
+            active = cbxActive.Checked;
+        }
+
+        void CleanData()
+        {
+            tbxName.Text = "";
+            cbxActive.Checked = false;
         }
 
         void LoadComboBox()
@@ -59,26 +122,6 @@ namespace ProjetoFinal.Forms
             }
         }
 
-        void GetData()
-        {
-            name = tbxName.Text;
-            email = tbxEmail.Text;
-            password = tbxPassword.Text;
-            confPassword = tbxConfPassword.Text;
-            active = cbxActive.Checked;
-
-        }
-
-        void CleanData()
-        {
-            tbxName.Text = "";
-            tbxEmail.Text = "";
-            tbxPassword.Text = "";
-            tbxConfPassword.Text = "";
-            cbxActive.Checked = false;
-            cmbProfile.Text = "";
-        }
-
         //Delete
         private void pbxDelete_MouseEnter(object sender, EventArgs e)
         {
@@ -94,8 +137,37 @@ namespace ProjetoFinal.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
-            
-        }
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+                try
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE USER SET ACTIVE = @active WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", false));
+
+                    cmd.ExecuteNonQuery();
+
+                    Log.SaveLog("Usuário Excluído", "Exclusão", DateTime.Now);
+
+                    MessageBox.Show("Usuário inativo!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao desativar este usuário!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+                }
+            }
+    }
 
         //Save
         private void pbxSave_MouseEnter(object sender, EventArgs e)
