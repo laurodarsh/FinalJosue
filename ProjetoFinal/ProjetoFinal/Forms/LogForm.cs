@@ -32,7 +32,7 @@ namespace ProjetoFinal.Forms
             {
                 sqlConnect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM LOG", sqlConnect);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM LOG ORDER BY DATE DESC", sqlConnect);
                 // SqlDataReader reader = cmd.ExecuteReader();
 
                 cmd.ExecuteNonQuery();
@@ -99,7 +99,7 @@ namespace ProjetoFinal.Forms
         }
 
         //Eraser
-        private void pbxEraser_Click(object sender, EventArgs e)
+        private void pbxEraser_Click_1(object sender, EventArgs e)
         {
             ShowData();
         }

@@ -60,7 +60,6 @@
             this.lblCategory.Size = new System.Drawing.Size(60, 15);
             this.lblCategory.TabIndex = 7;
             this.lblCategory.Text = "Categoria";
-            this.lblCategory.Visible = false;
             // 
             // lblProduct
             // 
@@ -71,7 +70,6 @@
             this.lblProduct.Size = new System.Drawing.Size(50, 15);
             this.lblProduct.TabIndex = 8;
             this.lblProduct.Text = "Produto";
-            this.lblProduct.Visible = false;
             // 
             // lblUser
             // 
@@ -82,7 +80,6 @@
             this.lblUser.Size = new System.Drawing.Size(50, 15);
             this.lblUser.TabIndex = 9;
             this.lblUser.Text = "Usuário";
-            this.lblUser.Visible = false;
             // 
             // lblLog
             // 
@@ -93,18 +90,16 @@
             this.lblLog.Size = new System.Drawing.Size(28, 15);
             this.lblLog.TabIndex = 10;
             this.lblLog.Text = "Log";
-            this.lblLog.Visible = false;
             // 
             // lblUserProfile
             // 
             this.lblUserProfile.AutoSize = true;
             this.lblUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserProfile.Location = new System.Drawing.Point(307, 225);
+            this.lblUserProfile.Location = new System.Drawing.Point(303, 225);
             this.lblUserProfile.Name = "lblUserProfile";
             this.lblUserProfile.Size = new System.Drawing.Size(98, 15);
             this.lblUserProfile.TabIndex = 11;
             this.lblUserProfile.Text = "Perfil de Usuário";
-            this.lblUserProfile.Visible = false;
             // 
             // lblOnline
             // 
@@ -126,7 +121,6 @@
             this.lblLogOff.Size = new System.Drawing.Size(29, 15);
             this.lblLogOff.TabIndex = 45;
             this.lblLogOff.Text = "Sair";
-            this.lblLogOff.Visible = false;
             // 
             // pbxLogOff
             // 

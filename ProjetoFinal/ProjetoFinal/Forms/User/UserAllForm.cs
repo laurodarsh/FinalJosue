@@ -104,6 +104,7 @@ namespace ProjetoFinal.Forms
 
                 MessageBox.Show("Usuário inativo!");
                 Log.SaveLog("Usuário Excluído", "Exclusão", DateTime.Now);
+                ShowData();
             }
             catch (Exception Ex)
             {

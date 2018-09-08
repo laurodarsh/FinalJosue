@@ -40,14 +40,14 @@ namespace ProjetoFinal.Forms
         private void pbxCategory_MouseEnter(object sender, EventArgs e)
         {
             pbxCategory.BackColor = Color.Gainsboro;
-            lblCategory.Visible = true;
+            lblCategory.Font = new Font(lblCategory.Font, FontStyle.Bold);
 
         }
 
         private void pbxCategory_MouseLeave(object sender, EventArgs e)
         {
             pbxCategory.BackColor = Color.Transparent;
-            lblCategory.Visible = false;
+            lblCategory.Font = new Font(lblCategory.Font, FontStyle.Regular);
         }
         
         //Product
@@ -60,13 +60,13 @@ namespace ProjetoFinal.Forms
         private void pbxProduct_MouseEnter(object sender, EventArgs e)
         {
             pbxProduct.BackColor = Color.Gainsboro;
-            lblProduct.Visible = true;
-    }
+            lblProduct.Font = new Font(lblProduct.Font, FontStyle.Bold);
+        }
 
         private void pbxProduct_MouseLeave(object sender, EventArgs e)
         {
             pbxProduct.BackColor = Color.Transparent;
-            lblProduct.Visible = false;
+            lblProduct.Font = new Font(lblProduct.Font, FontStyle.Regular);
         }
 
         //User
@@ -79,13 +79,13 @@ namespace ProjetoFinal.Forms
         private void pbxUser_MouseEnter(object sender, EventArgs e)
         {
             pbxUser.BackColor = Color.Gainsboro;
-            lblUser.Visible = true;
+            lblUser.Font = new Font(lblUser.Font, FontStyle.Bold);
         }
 
         private void pbxUser_MouseLeave(object sender, EventArgs e)
         {
             pbxUser.BackColor = Color.Transparent;
-            lblUser.Visible = false;
+            lblUser.Font = new Font(lblUser.Font, FontStyle.Regular);
         }
 
         //Log
@@ -98,13 +98,13 @@ namespace ProjetoFinal.Forms
         private void pbxLog_MouseEnter(object sender, EventArgs e)
         {
             pbxLog.BackColor = Color.Gainsboro;
-            lblLog.Visible = true;
+            lblLog.Font = new Font(lblLog.Font, FontStyle.Bold);
         }
 
         private void pbxLog_MouseLeave(object sender, EventArgs e)
         {
             pbxLog.BackColor = Color.Transparent;
-            lblLog.Visible = false;
+            lblLog.Font = new Font(lblLog.Font, FontStyle.Regular);
         }
 
         //User Profile
@@ -117,31 +117,33 @@ namespace ProjetoFinal.Forms
         private void pbxUserProfile_MouseEnter(object sender, EventArgs e)
         {
             pbxUserProfile.BackColor = Color.Gainsboro;
-            lblUserProfile.Visible = true;
+            lblUserProfile.Font = new Font(lblUserProfile.Font, FontStyle.Bold);
         }
 
         private void pbxUserProfile_MouseLeave(object sender, EventArgs e)
         {
             pbxUserProfile.BackColor = Color.Transparent;
-            lblUserProfile.Visible = false;
+            lblUserProfile.Font = new Font(lblUserProfile.Font, FontStyle.Regular);
         }
 
         //LogOff
         private void pbxLogOff_Click(object sender, EventArgs e)
         {
-
+            LoginForm lf = new LoginForm();
+            lf.Show();
+            this.Close();
         }
 
         private void pbxLogOff_MouseEnter(object sender, EventArgs e)
         {
             pbxLogOff.BackColor = Color.Gainsboro;
-            lblLogOff.Visible = true;
+            lblLogOff.Font = new Font(lblLogOff.Font, FontStyle.Bold);
         }
 
         private void pbxLogOff_MouseLeave(object sender, EventArgs e)
         {
             pbxLogOff.BackColor = Color.Transparent;
-            lblLogOff.Visible = false;
+            lblLogOff.Font = new Font(lblLogOff.Font, FontStyle.Regular);
         }
     }
 }

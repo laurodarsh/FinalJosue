@@ -100,6 +100,7 @@ namespace ProjetoFinal.Forms
 
                 MessageBox.Show("Perfil de usuário inativo!");
                 Log.SaveLog("Perfil de Usuário Excluído", "Exclusão", DateTime.Now);
+                ShowData();
             }
             catch (Exception Ex)
             {

@@ -113,6 +113,7 @@ namespace ProjetoFinal.Forms
 
                 MessageBox.Show("Produto inativo!");
                 Log.SaveLog("Produto Excluído", "Exclusão", DateTime.Now);
+                ShowData();
             }
             catch (Exception Ex)
             {

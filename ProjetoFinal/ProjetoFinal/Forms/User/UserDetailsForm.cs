@@ -25,6 +25,8 @@ namespace ProjetoFinal.Forms
         public UserDetailsForm(int idUser)
         {
             InitializeComponent();
+            cmbProfile.DisplayMember = "NAME";
+            LoadComboBox();
 
             lblId.Text = idUser.ToString();
 
@@ -83,6 +85,9 @@ namespace ProjetoFinal.Forms
         void GetData()
         {
             name = tbxName.Text;
+            email = tbxEmail.Text;
+            password = tbxPassword.Text;
+            confPassword = tbxConfPassword.Text;
             active = cbxActive.Checked;
         }
 
@@ -167,7 +172,7 @@ namespace ProjetoFinal.Forms
                     sqlConnect.Close();
                 }
             }
-    }
+        }
 
         //Save
         private void pbxSave_MouseEnter(object sender, EventArgs e)
@@ -184,42 +189,91 @@ namespace ProjetoFinal.Forms
 
         private void pbxSave_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnect = new SqlConnection(connectionString);
-            try
+            if (tbxConfPassword.Text == tbxConfPassword.Text)
             {
-                GetData();
-                if (confPassword == password)
+                if (string.IsNullOrEmpty(lblId.Text))
                 {
-                    sqlConnect.Open();
-                    string sql = "INSERT INTO [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password, @email, @active, @profile)";
+                    SqlConnection sqlConnect = new SqlConnection(connectionString);
+                    try
+                    {
+                        GetData();
+                        if (confPassword == password)
+                        {
+                            sqlConnect.Open();
+                            string sql = "INSERT INTO [USER](NAME, PASSWORD, EMAIL, ACTIVE, FK_USERPROFILE) VALUES (@name, @password, @email, @active, @fk_profile)";
 
-                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                            SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                    cmd.Parameters.Add(new SqlParameter("@name", name));
-                    cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash(password)));
-                    cmd.Parameters.Add(new SqlParameter("@email", email));
-                    cmd.Parameters.Add(new SqlParameter("@active", active));
-                    cmd.Parameters.Add(new SqlParameter("@profile", ((UserProfile)cmbProfile.SelectedItem).Id));
-                    cmd.ExecuteNonQuery();
+                            cmd.Parameters.Add(new SqlParameter("@name", name));
+                            cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash(password)));
+                            cmd.Parameters.Add(new SqlParameter("@email", email));
+                            cmd.Parameters.Add(new SqlParameter("@active", active));
+                            cmd.Parameters.Add(new SqlParameter("@fk_profile", ((UserProfile)cmbProfile.SelectedItem).Id));
+                            cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Adicionado com sucesso!");
-                    Log.SaveLog("Usuário Adicionado", "Adição", DateTime.Now);
-                    CleanData();
+                            MessageBox.Show("Adicionado com sucesso!");
+                            Log.SaveLog("Usuário Adicionado", "Adição", DateTime.Now);
+                            CleanData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Senhas não coincidem!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao adicionar usuário!" + ex.Message);
+                        CleanData();
+                    }
+                    finally
+                    {
+                        sqlConnect.Close();
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Senhas não coincidem!");
+                    SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+                    try
+                    {
+                        GetData();
+
+                        sqlConnect.Open();
+                        string sql = "UPDATE [USER] SET NAME = @name, PASSWORD = @password, EMAIL = @email, ACTIVE = @active, FK_USERPROFILE = @fk_profile Where ID = @id ";
+
+                        SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                        cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
+                        cmd.Parameters.Add(new SqlParameter("@name", name));
+                        cmd.Parameters.Add(new SqlParameter("@password", UserHelper.Hash(password)));
+                        cmd.Parameters.Add(new SqlParameter("@email", email));
+                        cmd.Parameters.Add(new SqlParameter("@active", active));
+                        cmd.Parameters.Add(new SqlParameter("@fk_profile", ((UserProfile)cmbProfile.SelectedItem).Id));
+
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Altereções salvas com sucesso!");
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show("Erro ao editar este usuário!" + "\n\n" + Ex.Message);
+                        throw;
+                    }
+                    finally
+                    {
+                        sqlConnect.Close();
+
+                        UserAllForm uaf = new UserAllForm();
+                        uaf.Show();
+                        this.Close();
+                    }
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Erro ao adicionar usuário!" + ex.Message);
-                CleanData();
-            }
-            finally
-            {
-                sqlConnect.Close();
-
+                MessageBox.Show("As senhas informadas não coincidem!");
             }
         }
 

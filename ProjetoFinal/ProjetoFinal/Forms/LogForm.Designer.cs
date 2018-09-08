@@ -121,6 +121,7 @@
             this.pbxEraser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxEraser.TabIndex = 45;
             this.pbxEraser.TabStop = false;
+            this.pbxEraser.Click += new System.EventHandler(this.pbxEraser_Click_1);
             // 
             // LogAllForm
             // 

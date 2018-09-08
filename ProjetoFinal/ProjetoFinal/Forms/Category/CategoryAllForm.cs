@@ -112,6 +112,7 @@ namespace ProjetoFinal.Forms
 
                 MessageBox.Show("Categoria inativa!");
                 Log.SaveLog("Categoria Excluída", "Exclusão", DateTime.Now);
+                ShowData();
             }
             catch (Exception Ex)
             {
@@ -121,7 +122,7 @@ namespace ProjetoFinal.Forms
             finally
             {
                 sqlConnect.Close();
-            }
+            }           
         }
 
         //Edit
