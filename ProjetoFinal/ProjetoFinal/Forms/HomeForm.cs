@@ -14,6 +14,11 @@ namespace ProjetoFinal.Forms
     public partial class HomeForm : Form
     {
         User aux = new User();
+
+        public HomeForm()
+        {
+            InitializeComponent();
+        }
         public HomeForm(User user)
         {
             InitializeComponent();
@@ -30,11 +35,14 @@ namespace ProjetoFinal.Forms
             aux = user;
             lblOnline.Text = "olá " + user.Name;
         }
-        //Category
+
+        #region Category
+
         private void pbxCategory_Click(object sender, EventArgs e)
         {
             CategoryAllForm c = new CategoryAllForm(aux);
             c.Show();
+            this.Close();
         }
 
         private void pbxCategory_MouseEnter(object sender, EventArgs e)
@@ -49,12 +57,16 @@ namespace ProjetoFinal.Forms
             pbxCategory.BackColor = Color.Transparent;
             lblCategory.Font = new Font(lblCategory.Font, FontStyle.Regular);
         }
-        
-        //Product
+
+        #endregion
+
+        #region Product
+
         private void pbxProduct_Click(object sender, EventArgs e)
         {
             ProductAllForm p = new ProductAllForm(aux);
             p.Show();
+            this.Close();
         }
 
         private void pbxProduct_MouseEnter(object sender, EventArgs e)
@@ -69,11 +81,15 @@ namespace ProjetoFinal.Forms
             lblProduct.Font = new Font(lblProduct.Font, FontStyle.Regular);
         }
 
-        //User
+        #endregion
+
+        #region User
+
         private void pbxUser_Click(object sender, EventArgs e)
         {
             UserAllForm u = new UserAllForm();
             u.Show();
+            this.Close();
         }
 
         private void pbxUser_MouseEnter(object sender, EventArgs e)
@@ -88,11 +104,15 @@ namespace ProjetoFinal.Forms
             lblUser.Font = new Font(lblUser.Font, FontStyle.Regular);
         }
 
-        //Log
+        #endregion
+
+        #region Log
+
         private void pbxLog_Click(object sender, EventArgs e)
         {
             LogAllForm l = new LogAllForm();
             l.Show();
+            this.Close();
         }
 
         private void pbxLog_MouseEnter(object sender, EventArgs e)
@@ -106,12 +126,16 @@ namespace ProjetoFinal.Forms
             pbxLog.BackColor = Color.Transparent;
             lblLog.Font = new Font(lblLog.Font, FontStyle.Regular);
         }
+        
+        #endregion
 
-        //User Profile
+        #region User Profile
+
         private void pbxUserProfile_Click(object sender, EventArgs e)
         {
             UserProfileAllForm up = new UserProfileAllForm();
             up.Show();
+            this.Close();
         }
 
         private void pbxUserProfile_MouseEnter(object sender, EventArgs e)
@@ -126,7 +150,10 @@ namespace ProjetoFinal.Forms
             lblUserProfile.Font = new Font(lblUserProfile.Font, FontStyle.Regular);
         }
 
-        //LogOff
+        #endregion
+
+        #region LogOff
+
         private void pbxLogOff_Click(object sender, EventArgs e)
         {
             LoginForm lf = new LoginForm();
@@ -145,5 +172,7 @@ namespace ProjetoFinal.Forms
             pbxLogOff.BackColor = Color.Transparent;
             lblLogOff.Font = new Font(lblLogOff.Font, FontStyle.Regular);
         }
+       
+        #endregion
     }
 }

@@ -21,6 +21,8 @@ namespace ProjetoFinal.Forms
         public UserProfileDetailsForm()
         {
             InitializeComponent();
+            pbxDelete.Visible = false;
+            lblDelete.Visible = false;
         }
 
         public UserProfileDetailsForm(int idUserProfile)
@@ -117,6 +119,8 @@ namespace ProjetoFinal.Forms
                     Log.SaveLog("Perfil de Usuário Excluído", "Exclusão", DateTime.Now);
 
                     MessageBox.Show("perfil de usuário inativo!");
+                    UserProfileAllForm upaf = new UserProfileAllForm();
+                    upaf.Show();
                 }
                 catch (Exception Ex)
                 {
@@ -227,6 +231,8 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            UserProfileAllForm upaf = new UserProfileAllForm();
+            upaf.Show();
             this.Close();
         }
 

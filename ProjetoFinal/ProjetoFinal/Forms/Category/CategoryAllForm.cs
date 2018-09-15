@@ -16,6 +16,7 @@ namespace ProjetoFinal.Forms
     {
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
         User aux = new User();
+
         public CategoryAllForm(User user)
         {
             InitializeComponent();
@@ -163,8 +164,9 @@ namespace ProjetoFinal.Forms
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            CategoryDetailsForm cd = new CategoryDetailsForm();
+            CategoryDetailsForm cd = new CategoryDetailsForm(aux);
             cd.Show();
+            this.Close();
         }
 
         //Back
@@ -182,7 +184,10 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            HomeForm hm = new HomeForm(aux);
+            hm.Show();
             this.Close();
+            
         }
 
         //Sarch

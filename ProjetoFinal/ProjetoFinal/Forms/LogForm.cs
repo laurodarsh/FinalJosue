@@ -83,6 +83,8 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            HomeForm hm = new HomeForm();
+            hm.Show();
             this.Close();
         }
 

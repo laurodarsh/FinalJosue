@@ -51,7 +51,7 @@ namespace ProjetoFinal.Classes
             }
             catch (Exception ex)
             {
-
+                throw new Exception("Usúario não existe");
             }
             finally
             {

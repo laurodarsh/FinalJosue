@@ -80,6 +80,8 @@ namespace ProjetoFinal.Forms
             InitializeComponent();
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
+            pbxDelete.Visible = false;
+            lblDelete.Visible = false;
         }
 
         void GetData()
@@ -161,6 +163,9 @@ namespace ProjetoFinal.Forms
                     Log.SaveLog("Usuário Excluído", "Exclusão", DateTime.Now);
 
                     MessageBox.Show("Usuário inativo!");
+                    UserAllForm uaf = new UserAllForm();
+                    uaf.Show();
+                    this.Close();
                 }
                 catch (Exception Ex)
                 {
@@ -292,6 +297,8 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            UserAllForm uaf = new UserAllForm();
+            uaf.Show();
             this.Close();
         }
     }

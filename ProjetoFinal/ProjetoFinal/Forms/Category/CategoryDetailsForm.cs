@@ -18,10 +18,14 @@ namespace ProjetoFinal.Forms
         string name = "";
         bool active = false;
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
-        User aux;
-        public CategoryDetailsForm()
+        User aux = new User();
+
+        public CategoryDetailsForm(User user)
         {
             InitializeComponent();
+            aux = user;
+            pbxDelete.Visible = false;
+            lblDelete.Visible = false;
         }
 
         public CategoryDetailsForm(int idCategory, User user)
@@ -114,6 +118,9 @@ namespace ProjetoFinal.Forms
 
                     MessageBox.Show("categoria inativa!");
                     Log.SaveLog("Categoria Excluída", "Exclusão", DateTime.Now);
+                    CategoryAllForm caf = new CategoryAllForm(aux);
+                    caf.Show();
+                    this.Close();
                 }
                 catch (Exception Ex)
                 {
@@ -225,6 +232,8 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            CategoryAllForm caf = new CategoryAllForm(aux);
+            caf.Show();
             this.Close();
         }
     }

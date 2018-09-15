@@ -166,6 +166,7 @@ namespace ProjetoFinal.Forms
         {
             ProductDetailsForm pd = new ProductDetailsForm(aux);
             pd.Show();
+            this.Close();
         }
 
         //Back

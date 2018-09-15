@@ -27,6 +27,8 @@ namespace ProjetoFinal.Forms
             cmbCategory.DisplayMember = "NAME";
             LoadComboBox();
             aux = user;
+            pbxDelete.Visible = false;
+            lblDelete.Visible = false;
         }
 
         public ProductDetailsForm(int idProduct, User user)
@@ -160,6 +162,8 @@ namespace ProjetoFinal.Forms
 
                     Log.SaveLog("Produto Excluído", "Exclusão", DateTime.Now);
                     MessageBox.Show("produto inativo!");
+                    ProductAllForm paf = new ProductAllForm(aux);
+                    paf.Show();
                 }
                 catch (Exception Ex)
                 {
@@ -274,6 +278,8 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
+            ProductAllForm paf = new ProductAllForm(aux);
+            paf.Show();
             this.Close();
         }
     }
