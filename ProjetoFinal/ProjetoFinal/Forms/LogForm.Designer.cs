@@ -35,14 +35,10 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.pbxEraser = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEraser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBack
@@ -126,33 +122,11 @@
             this.pbxEraser.TabStop = false;
             this.pbxEraser.Click += new System.EventHandler(this.pbxEraser_Click_1);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProjetoFinal.Properties.Resources.shop;
-            this.pictureBox2.Location = new System.Drawing.Point(231, 268);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjetoFinal.Properties.Resources.lvlup;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 268);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
-            // 
             // LogAllForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 311);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbxEraser);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pbxBack);
@@ -166,8 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEraser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +153,5 @@
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;
         internal System.Windows.Forms.PictureBox pbxEraser;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
