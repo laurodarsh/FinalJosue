@@ -72,13 +72,13 @@ namespace ProjetoFinal.Forms
         private void pbxBack_MouseEnter(object sender, EventArgs e)
         {
             pbxBack.BackColor = Color.Gainsboro;
-            lblBack.Visible = true;
+            lblBack.Font = new Font(lblBack.Font, FontStyle.Bold);
         }
 
         private void pbxBack_MouseLeave(object sender, EventArgs e)
         {
             pbxBack.BackColor = Color.Transparent;
-            lblBack.Visible = false;
+            lblBack.Font = new Font(lblBack.Font, FontStyle.Regular);
         }
 
         private void pbxBack_Click(object sender, EventArgs e)

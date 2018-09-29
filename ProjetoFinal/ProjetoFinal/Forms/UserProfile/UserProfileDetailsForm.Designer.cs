@@ -63,7 +63,6 @@
             this.lblSave.Size = new System.Drawing.Size(41, 15);
             this.lblSave.TabIndex = 25;
             this.lblSave.Text = "Salvar";
-            this.lblSave.Visible = false;
             // 
             // lblDelete
             // 
@@ -75,7 +74,6 @@
             this.lblDelete.Size = new System.Drawing.Size(44, 15);
             this.lblDelete.TabIndex = 23;
             this.lblDelete.Text = "Excluir";
-            this.lblDelete.Visible = false;
             // 
             // lblBack
             // 
@@ -87,7 +85,6 @@
             this.lblBack.Size = new System.Drawing.Size(38, 15);
             this.lblBack.TabIndex = 22;
             this.lblBack.Text = "Voltar";
-            this.lblBack.Visible = false;
             // 
             // tbxName
             // 

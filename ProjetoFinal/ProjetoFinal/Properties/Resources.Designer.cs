@@ -63,9 +63,9 @@ namespace ProjetoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _17_512 {
+        internal static System.Drawing.Bitmap _70_512 {
             get {
-                object obj = ResourceManager.GetObject("_17_512", resourceCulture);
+                object obj = ResourceManager.GetObject("_70_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,16 +96,6 @@ namespace ProjetoFinal.Properties {
         internal static System.Drawing.Bitmap cmicon {
             get {
                 object obj = ResourceManager.GetObject("cmicon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap community_icon_1 {
-            get {
-                object obj = ResourceManager.GetObject("community_icon_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +203,16 @@ namespace ProjetoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lvlup {
+            get {
+                object obj = ResourceManager.GetObject("lvlup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minio_Devices_and_Hardware_Bold_90_512 {
             get {
                 object obj = ResourceManager.GetObject("Minio_Devices_and_Hardware_Bold_90_512", resourceCulture);
@@ -223,9 +223,39 @@ namespace ProjetoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shop {
+            get {
+                object obj = ResourceManager.GetObject("shop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Connection_Nodes_Links_Social_Person_512 {
+            get {
+                object obj = ResourceManager.GetObject("User_Connection_Nodes_Links_Social_Person_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_male2_512 {
             get {
                 object obj = ResourceManager.GetObject("user_male2_512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Man_Gear_Cog_Setting_Control_Avatar_Configure_512 {
+            get {
+                object obj = ResourceManager.GetObject("User_Man_Gear_Cog_Setting_Control_Avatar_Configure_512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

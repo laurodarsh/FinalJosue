@@ -14,7 +14,7 @@ namespace ProjetoFinal.Classes
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-            mail.From = new MailAddress("lucariuzx@gmail.com");
+            mail.From = new MailAddress("levelup.storebeta@gmail.com");
             mail.To.Add(email);
             mail.Subject = "Reenvio de senha";
 

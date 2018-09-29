@@ -61,7 +61,6 @@
             this.lblDelete.Size = new System.Drawing.Size(44, 15);
             this.lblDelete.TabIndex = 35;
             this.lblDelete.Text = "Excluir";
-            this.lblDelete.Visible = false;
             // 
             // lblEdit
             // 
@@ -73,7 +72,6 @@
             this.lblEdit.Size = new System.Drawing.Size(39, 15);
             this.lblEdit.TabIndex = 34;
             this.lblEdit.Text = "Editar";
-            this.lblEdit.Visible = false;
             // 
             // lblAdd
             // 
@@ -85,7 +83,6 @@
             this.lblAdd.Size = new System.Drawing.Size(58, 15);
             this.lblAdd.TabIndex = 33;
             this.lblAdd.Text = "Adicionar";
-            this.lblAdd.Visible = false;
             // 
             // lblBack
             // 
@@ -97,7 +94,6 @@
             this.lblBack.Size = new System.Drawing.Size(38, 15);
             this.lblBack.TabIndex = 32;
             this.lblBack.Text = "Voltar";
-            this.lblBack.Visible = false;
             // 
             // dgvUser
             // 

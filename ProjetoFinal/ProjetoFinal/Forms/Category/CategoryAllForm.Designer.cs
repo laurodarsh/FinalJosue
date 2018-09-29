@@ -93,7 +93,6 @@
             this.lblBack.Size = new System.Drawing.Size(38, 15);
             this.lblBack.TabIndex = 8;
             this.lblBack.Text = "Voltar";
-            this.lblBack.Visible = false;
             // 
             // lblAdd
             // 
@@ -105,7 +104,6 @@
             this.lblAdd.Size = new System.Drawing.Size(58, 15);
             this.lblAdd.TabIndex = 9;
             this.lblAdd.Text = "Adicionar";
-            this.lblAdd.Visible = false;
             // 
             // lblEdit
             // 
@@ -117,7 +115,6 @@
             this.lblEdit.Size = new System.Drawing.Size(39, 15);
             this.lblEdit.TabIndex = 10;
             this.lblEdit.Text = "Editar";
-            this.lblEdit.Visible = false;
             // 
             // lblDelete
             // 
@@ -129,7 +126,6 @@
             this.lblDelete.Size = new System.Drawing.Size(44, 15);
             this.lblDelete.TabIndex = 11;
             this.lblDelete.Text = "Excluir";
-            this.lblDelete.Visible = false;
             // 
             // pbxDelete
             // 

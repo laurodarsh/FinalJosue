@@ -121,11 +121,20 @@
   <data name="circled_left_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\circled-left-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cmicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\cmicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="community_icon_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\community-icon-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_icon_png_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\edit-icon-png-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eraser_61_380829" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\eraser-61-380829.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gender_neutral_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\gender-neutral-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="img_176563" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\img_176563.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,28 +154,28 @@
   <data name="log" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Minio_Devices_and_Hardware_Bold_90_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Minio_Devices_and_Hardware_Bold-90-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_Connection_Nodes_Links_Social_Person_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\User_Connection_Nodes_Links_Social_Person-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_male2_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\user_male2-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_Man_Gear_Cog_Setting_Control_Avatar_Configure_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\User_Man_Gear_Cog_Setting_Control_Avatar_Configure-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_70_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\70-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_828165_add_512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\828165_add_512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="community_icon_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\community-icon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lvlup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\lvlup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cmicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\cmicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_17_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\17-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eraser_61_380829" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\eraser-61-380829.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minio_Devices_and_Hardware_Bold_90_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\Minio_Devices_and_Hardware_Bold-90-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gender_neutral_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\gender-neutral-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

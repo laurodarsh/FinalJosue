@@ -133,13 +133,13 @@ namespace ProjetoFinal.Forms
         private void pbxDelete_MouseEnter(object sender, EventArgs e)
         {
             pbxDelete.BackColor = Color.Gainsboro;
-            lblDelete.Visible = true;
+            lblDelete.Font = new Font(lblDelete.Font, FontStyle.Bold);
         }
 
         private void pbxDelete_MouseLeave(object sender, EventArgs e)
         {
             pbxDelete.BackColor = Color.Transparent;
-            lblDelete.Visible = false;
+            lblDelete.Font = new Font(lblDelete.Font, FontStyle.Regular);
         }
 
         private void pbxDelete_Click(object sender, EventArgs e)
@@ -181,13 +181,13 @@ namespace ProjetoFinal.Forms
         private void pbxSave_MouseEnter(object sender, EventArgs e)
         {
             pbxSave.BackColor = Color.Gainsboro;
-            lblSave.Visible = true;
+            lblSave.Font = new Font(lblSave.Font, FontStyle.Bold);
         }
 
         private void pbxSave_MouseLeave(object sender, EventArgs e)
         {
             pbxSave.BackColor = Color.Transparent;
-            lblSave.Visible = false;
+            lblSave.Font = new Font(lblSave.Font, FontStyle.Regular);
         }
 
         private void pbxSave_Click(object sender, EventArgs e)
@@ -267,13 +267,13 @@ namespace ProjetoFinal.Forms
         private void pbxBack_MouseEnter(object sender, EventArgs e)
         {
             pbxBack.BackColor = Color.Gainsboro;
-            lblBack.Visible = true;
+            lblBack.Font = new Font(lblBack.Font, FontStyle.Bold);
         }
 
         private void pbxBack_MouseLeave(object sender, EventArgs e)
         {
             pbxBack.BackColor = Color.Transparent;
-            lblBack.Visible = false;
+            lblBack.Font = new Font(lblBack.Font, FontStyle.Regular);
         }
 
         private void pbxBack_Click(object sender, EventArgs e)
