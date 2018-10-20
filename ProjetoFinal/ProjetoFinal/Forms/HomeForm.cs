@@ -87,7 +87,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxUser_Click(object sender, EventArgs e)
         {
-            UserAllForm u = new UserAllForm();
+            UserAllForm u = new UserAllForm(aux);
             u.Show();
             this.Close();
         }
@@ -110,7 +110,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxLog_Click(object sender, EventArgs e)
         {
-            LogAllForm l = new LogAllForm();
+            LogAllForm l = new LogAllForm(aux);
             l.Show();
             this.Close();
         }
@@ -133,7 +133,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxUserProfile_Click(object sender, EventArgs e)
         {
-            UserProfileAllForm up = new UserProfileAllForm();
+            UserProfileAllForm up = new UserProfileAllForm(aux);
             up.Show();
             this.Close();
         }

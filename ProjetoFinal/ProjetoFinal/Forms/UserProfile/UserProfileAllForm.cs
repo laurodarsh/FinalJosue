@@ -15,11 +15,11 @@ namespace ProjetoFinal.Forms
     public partial class UserProfileAllForm : Form
     {
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
-
-        public UserProfileAllForm()
+        User aux = new User();
+        public UserProfileAllForm(User user)
         {
             InitializeComponent();
-
+            aux = user;
             ShowData();
             ResizeDataGridView();
         }
@@ -130,7 +130,7 @@ namespace ProjetoFinal.Forms
         {
             int idUserProfile = Int32.Parse(dgvUserProfile.SelectedRows[0].Cells[0].Value.ToString());
 
-            UserProfileDetailsForm UserProfileDetails = new UserProfileDetailsForm(idUserProfile);
+            UserProfileDetailsForm UserProfileDetails = new UserProfileDetailsForm(idUserProfile, aux);
             UserProfileDetails.Show();
 
             this.Close();
@@ -151,7 +151,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            UserProfileDetailsForm upd = new UserProfileDetailsForm();
+            UserProfileDetailsForm upd = new UserProfileDetailsForm(aux);
             upd.Show();
         }
 
@@ -170,7 +170,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            HomeForm hm = new HomeForm();
+            HomeForm hm = new HomeForm(aux);
             hm.Show();
             this.Close();
         }

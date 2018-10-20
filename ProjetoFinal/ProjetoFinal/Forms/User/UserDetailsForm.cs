@@ -21,10 +21,11 @@ namespace ProjetoFinal.Forms
         bool active;
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
         List<UserProfile> profiles = new List<UserProfile>();
-
-        public UserDetailsForm(int idUser)
+        User aux = new User();
+        public UserDetailsForm(int idUser,User user1)
         {
             InitializeComponent();
+            aux = user1;
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
 
@@ -75,9 +76,10 @@ namespace ProjetoFinal.Forms
             }
         }
 
-        public UserDetailsForm()
+        public UserDetailsForm(User user)
         {
             InitializeComponent();
+            aux = user;
             cmbProfile.DisplayMember = "NAME";
             LoadComboBox();
             pbxDelete.Visible = false;
@@ -163,7 +165,7 @@ namespace ProjetoFinal.Forms
                     Log.SaveLog("Usuário Excluído", "Exclusão", DateTime.Now);
 
                     MessageBox.Show("Usuário inativo!");
-                    UserAllForm uaf = new UserAllForm();
+                    UserAllForm uaf = new UserAllForm(aux);
                     uaf.Show();
                     this.Close();
                 }
@@ -270,7 +272,7 @@ namespace ProjetoFinal.Forms
                     {
                         sqlConnect.Close();
 
-                        UserAllForm uaf = new UserAllForm();
+                        UserAllForm uaf = new UserAllForm(aux);
                         uaf.Show();
                         this.Close();
                     }
@@ -297,7 +299,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            UserAllForm uaf = new UserAllForm();
+            UserAllForm uaf = new UserAllForm(aux);
             uaf.Show();
             this.Close();
         }

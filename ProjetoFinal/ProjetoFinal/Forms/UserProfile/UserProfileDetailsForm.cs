@@ -17,18 +17,19 @@ namespace ProjetoFinal.Forms
         string name = "";
         bool active = false;
         string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
-
-        public UserProfileDetailsForm()
+        User aux = new User();
+        public UserProfileDetailsForm(User user)
         {
             InitializeComponent();
+            aux = user;
             pbxDelete.Visible = false;
             lblDelete.Visible = false;
         }
 
-        public UserProfileDetailsForm(int idUserProfile)
+        public UserProfileDetailsForm(int idUserProfile, User user)
         {
             InitializeComponent();
-
+            aux = user;
             lblId.Text = idUserProfile.ToString();
 
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -119,7 +120,7 @@ namespace ProjetoFinal.Forms
                     Log.SaveLog("Perfil de Usuário Excluído", "Exclusão", DateTime.Now);
 
                     MessageBox.Show("perfil de usuário inativo!");
-                    UserProfileAllForm upaf = new UserProfileAllForm();
+                    UserProfileAllForm upaf = new UserProfileAllForm(aux);
                     upaf.Show();
                 }
                 catch (Exception Ex)
@@ -209,7 +210,7 @@ namespace ProjetoFinal.Forms
                 {
                     sqlConnect.Close();
 
-                    UserProfileAllForm upaf = new UserProfileAllForm();
+                    UserProfileAllForm upaf = new UserProfileAllForm(aux);
                     upaf.Show();
                     this.Close();
                 }
@@ -231,7 +232,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            UserProfileAllForm upaf = new UserProfileAllForm();
+            UserProfileAllForm upaf = new UserProfileAllForm(aux);
             upaf.Show();
             this.Close();
         }
