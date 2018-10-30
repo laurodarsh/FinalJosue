@@ -14,7 +14,7 @@ namespace ProjetoFinal.Forms
 {
     public partial class UserAllForm : Form
     {
-        string connectionString = "workstation id=StockControlData.mssql.somee.com;packet size=4096;user id=luacademy_SQLLogin_1;pwd=msctq6gvt3;data source=StockControlData.mssql.somee.com;persist security info=False;initial catalog=StockControlData";
+        string connectionString = "workstation id=StockControl.mssql.somee.com;packet size=4096;user id=levelupacademy_SQLLogin_1;pwd=3wwate8gu1;data source=StockControl.mssql.somee.com;persist security info=False;initial catalog=StockControl";
         User aux = new User();
         public UserAllForm(User user)
         {
@@ -158,6 +158,7 @@ namespace ProjetoFinal.Forms
         {
             UserDetailsForm ud = new UserDetailsForm(aux);
             ud.Show();
+            this.Close();
         }
 
         //Back
@@ -175,7 +176,7 @@ namespace ProjetoFinal.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            HomeForm hm = new HomeForm();
+            HomeForm hm = new HomeForm(aux);
             hm.Show();
             this.Close();
         }
